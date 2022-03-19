@@ -23,8 +23,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/icssc-projects/fellowship/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -45,9 +44,9 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'unit1',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Course',
           },
           {
             href: 'https://github.com/icssc-projects',
