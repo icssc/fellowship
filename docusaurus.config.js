@@ -22,6 +22,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: "course",
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/icssc-projects/fellowship/tree/main/',
         },
@@ -63,7 +64,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/intro',
+                to: '/docs/syllabus',
               },
             ],
           },
