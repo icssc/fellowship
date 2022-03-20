@@ -27,7 +27,7 @@ APIs are also used for programs to interact with each other. We will be using AP
 
 ## REST API
 
-REST stands for REpresentational State Transfer, and is an architectural style for creating web services. REST treats each any data as a resource, that the client can fetch/edit/delete. We specify these resources through URLs and then sending a **request**. The server will then provide a **response**. 
+REST stands for Representational State Transfer, and is an architectural style for creating web services. REST treats each any data as a resource, that the client can fetch/edit/delete. We specify these resources through URLs and then sending a **request**. The server will then provide a **response**. 
 
 ### HTTP Methods
 
@@ -69,7 +69,7 @@ The output will look a little weird but after it’s made pretty, it will look l
     ],
     "description": "Techniques for efficient algorithm design, including divide-and-conquer and dynamic programming, and time/space analysis. Fast algorithms for problems applicable to networks, computer games, and scientific computing, such as sorting, shortest paths, minimum spanning trees, network flow, and pattern matching.",
     "department_name": "Computer Science",
-		...
+    ...
 }
 ```
 
