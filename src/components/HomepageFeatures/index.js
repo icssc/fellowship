@@ -4,29 +4,34 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Learn Foundational Skills',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Learn foundational software development skills like how to use Git, Github, the Terminal.
+        We'll also cover professional development topics like Resumes, LinkedIn, and Interview Prep.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Learn Web Development',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Starting with HTML, CSS, and Javascript, we'll learn how to create simple websites.
+        Then we'll move onto React, API calls, and more.
+        During the fellowship you'll develop several websites and become comfortable with modern web technologies.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Contribute to an ICSSC Project',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        By the end of the Fellowship, you will use your new skills to contribute to 
+        one of the ICSSC Projects: <a href="https://antalmanac.com" target="_blank">AntAlmanac</a>
+        , <a href="https://peterportal.org" target="_blank">PeterPortal</a>
+        , <a href="https://api.peterportal.org" target="_blank">PeterPortal API</a>
+        , <a href="https://zotistics.com" target="_blank">Zotistics</a>
+        , or even this Fellowship website!
       </>
     ),
   },
