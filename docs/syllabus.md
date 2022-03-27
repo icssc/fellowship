@@ -1,5 +1,6 @@
 ---
 sidebar_position: 0
+sidebar_label: Syllabus
 ---
 
 # ICSSC Projects Fellowship Syllabus
@@ -10,8 +11,6 @@ The goal of this course is to teach you fundamental software development and web
 This is an **asynchronous** course with prerecorded videos, weekly assignments, and virtual Discord Office Hours. You should be able to commit 2-3 hours per week for this Fellowship.
 
 *Disclaimer: This course is **not** for credit and is **not** affiliated with UCI.*
-
-💡 Want to join us in Spring 2022? Fill out this [interest form](https://forms.gle/St2ABHuisbaJZXSp9).
 
 ## <u>Instructors</u>
 
@@ -26,16 +25,16 @@ This is an **asynchronous** course with prerecorded videos, weekly assignments, 
 
 | Week | Topics | Content | Unit Page |
 | :--- | :--- | :--- | :--- |
-| 1 | Fellowship Application, GitHub | Apply to the Fellowship and get your GitHub setup. | [Unit 1](https://fellowship.icssc.club/docs/unit1) |
-| 2 | Terminal | The basics of the terminal. | [Unit 2](https://fellowship.icssc.club/docs/unit2) |
-| 3 | Git | The basics of git and how to use GitHub. | [Unit 3](https://fellowship.icssc.club/docs/unit3) |
-| 4 | HTML, CSS, JavaScript | Intro to web development. | [Unit 4](https://fellowship.icssc.club/docs/unit4) |
-| 5 | Resume Review, LinkedIn | Improve personal branding and get yourself ready for internship applications. | [Unit 5](https://fellowship.icssc.club/docs/unit5) |
-| 6 | React | Develop a website using one of the most popular JavaScript libraries. | [Unit 6](https://fellowship.icssc.club/docs/unit6) |
-| 7 | APIs, REST, GraphQL  | Learn about how to fetch information from APIs | [Unit 7](https://fellowship.icssc.club/docs/unit7) |
-| 8 | TypeScript | Explore the programming language many web developers switched to. | [Unit 8](https://fellowship.icssc.club/docs/unit8) |
+| 1 | Fellowship Application, GitHub | Apply to the Fellowship and get your GitHub setup. | [Unit 1](/course/unit1) |
+| 2 | Terminal | The basics of the terminal. | [Unit 2](/course/unit2) |
+| 3 | Git | The basics of git and how to use GitHub. | [Unit 3](/course/unit3) |
+| 4 | HTML, CSS, JavaScript | Intro to web development. | [Unit 4](/course/unit4) |
+| 5 | Resume Review, LinkedIn | Improve personal branding and get yourself ready for internship applications. | [Unit 5](/course/unit5) |
+| 6 | React | Develop a website using one of the most popular JavaScript libraries. | [Unit 6](/course/unit6) |
+| 7 | APIs, REST, GraphQL  | Learn about how to fetch information from APIs | [Unit 7](/course/unit7) |
+| 8 | TypeScript | Explore the programming language many web developers switched to. | [Unit 8](/course/unit8) |
 | 9 | Collaboration on GitHub | Forking, branches, pull requests, and working as a team on GitHub. |  |
-| 10 | Open Source Contribution | Use the knowledge that you’ve learned this quarter to make a contribution to one our our ICSSC projects! | [Unit 10](https://fellowship.icssc.club/docs/unit10) |
+| 10 | Open Source Contribution | Use the knowledge that you’ve learned this quarter to make a contribution to one our our ICSSC projects! | [Unit 10](/course/unit10) |
 
 ## <u>Course Content</u>
 
