@@ -10,7 +10,7 @@ In this unit, we will be going over how to use the terminal, or you may know it 
 
 ## Unit 2 Lecture Video
 
-<iframe width="560" height="315" src="https://youtube.com/embed/KAKWE1xj_II" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://youtube.com/embed/KAKWE1xj_II" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
 
 ## Terminal
 

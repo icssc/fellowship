@@ -10,7 +10,7 @@ This week, we’ll be combining what we’ve done in the past 2 weeks, to learn 
 
 ## Unit 3 Lecture Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jFhAPcxPEfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jFhAPcxPEfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
 
 ## Git
 

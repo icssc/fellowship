@@ -10,7 +10,7 @@ This week we take a quick detour to discuss personal branding! When it comes to 
 
 ## Unit 5 Lecture Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/O-2x0eAMPss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O-2x0eAMPss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
 
 ## Resume
 

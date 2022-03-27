@@ -10,7 +10,7 @@ In your final unit, you’ll use the skills learned throughout the fellowship to
 
 ## Unit 10 Lecture Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jk3LCtFAb9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jk3LCtFAb9Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
 
 
 
