@@ -40,7 +40,7 @@ const config = {
         title: 'ICSSC Fellowship',
         logo: {
           alt: 'ICSSC Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {
