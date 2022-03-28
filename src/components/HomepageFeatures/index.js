@@ -7,13 +7,13 @@ const FeatureList = [
     title: 'Learn Foundational Skills',
     description: (
       <>
-        Learn foundational software development skills like how to use Git, Github, the Terminal.
+        Learn foundational software development skills like how to use Git, Github, and the Terminal.
         We'll also cover professional development topics like Resumes, LinkedIn, and Interview Prep.
       </>
     ),
   },
   {
-    title: 'Learn Web Development',
+    title: 'Develop Websites',
     description: (
       <>
         Starting with HTML, CSS, and Javascript, we'll learn how to create simple websites.
