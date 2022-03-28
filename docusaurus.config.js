@@ -10,7 +10,7 @@ const config = {
   tagline: '🚧 This site is currently under construction 🚧',
   url: 'https://fellowship.icssc.club',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'icssc-projects',
