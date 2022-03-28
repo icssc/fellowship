@@ -38,13 +38,13 @@ This is an **asynchronous** course with prerecorded videos, weekly assignments, 
 
 ## <u>Course Content</u>
 
-Every Monday, the unit for the week will be released on Notion. Each unit will contain a pre-recorded video, external resources, and your assignment(s) for the week. You can look through this material at your own pace at a time that is convenient for your schedule. 
+Every Monday, the unit for the week will be available on this website. Each unit will contain a pre-recorded video, external resources, and your assignment(s) for the week. You can look through this material at your own pace at a time that is convenient for your schedule. 
 
 We recommend reviewing the material as soon as possible though, so you can ask questions in Discord and/or Office Hours during the week.
 
 ### Assignments
 
-Assignments are **due Monday at 11:59pm.**
+Assignments are **due Monday at 11:59pm.** unless stated otherwise. 
 
 Each assignment will have a list of required tasks and a list of optional stretch goals for you to complete. You will receive a point for each task that you complete.
 
@@ -81,11 +81,10 @@ After joining the server, we will give you a `fellow` role, which grants you acc
 | 🔈 Office Hours | Voice channel for our weekly office hours. |
 | 🔈 Work Session | Voice channel for you to use  |
 
-### Notion - *Our Canvas*
+### Fellowship Website - *Our Canvas*
 
-All information about the Fellowship can be found on Notion. 
+All information about the Fellowship can be found at [fellowship.icssc.club](https://fellowship.icssc.club/course/syllabus). 
 
-Upon admission to the Fellowship, you will receive a link to our Notion dashboard. This dashboard is like our course’s Canvas and will be your primary resource hub during the quarter. 
 
 ## <u>Office Hours</u>
 
