@@ -57,7 +57,6 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
         links: [
             {label: "Discord", href:"https://discord.gg/GzF76D7UhY"},
             {label: "GitHub", href: 'https://github.com/icssc-projects'}
