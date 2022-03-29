@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'ICSSC Fellowship',
-  tagline: 'A crash course on web development.',
+  tagline: 'A crash course on web development. 💻',
   url: 'https://fellowship.icssc.club',
   baseUrl: '/',
   onBrokenLinks: 'warn',
