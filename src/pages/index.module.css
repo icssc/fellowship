@@ -21,3 +21,7 @@
   align-items: center;
   justify-content: center;
 }
+
+p {
+  margin-bottom: 0.5rem;
+}
