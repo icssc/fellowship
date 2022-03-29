@@ -23,18 +23,18 @@ This is an **asynchronous** course with prerecorded videos, weekly assignments, 
 
 *This is our tentative course timeline and is subject to change.* 
 
-| Week | Topics | Content | Unit Page |
-| :--- | :--- | :--- | :--- |
-| 1 | Fellowship Application, GitHub | Apply to the Fellowship and get your GitHub setup. | [Unit 1](/course/unit1) |
-| 2 | Terminal | The basics of the terminal. | [Unit 2](/course/unit2) |
-| 3 | Git | The basics of git and how to use GitHub. | [Unit 3](/course/unit3) |
-| 4 | HTML, CSS, JavaScript | Intro to web development. | [Unit 4](/course/unit4) |
-| 5 | Resume Review, LinkedIn | Improve personal branding and get yourself ready for internship applications. | [Unit 5](/course/unit5) |
-| 6 | React | Develop a website using one of the most popular JavaScript libraries. | [Unit 6](/course/unit6) |
-| 7 | APIs, REST, GraphQL  | Learn about how to fetch information from APIs | [Unit 7](/course/unit7) |
-| 8 | TypeScript | Explore the programming language many web developers switched to. | [Unit 8](/course/unit8) |
+| Week | Topics | Content |
+| :--- | :--- | :--- |
+| 1 | Fellowship Application, GitHub | Apply to the Fellowship and get your GitHub setup. |
+| 2 | Terminal | The basics of the terminal. |
+| 3 | Git | The basics of git and how to use GitHub. |
+| 4 | HTML, CSS, JavaScript | Intro to web development. |
+| 5 | Resume Review, LinkedIn | Improve personal branding and get yourself ready for internship applications. |
+| 6 | React | Develop a website using one of the most popular JavaScript libraries. |
+| 7 | APIs, REST, GraphQL  | Learn about how to fetch information from APIs |
+| 8 | TypeScript | Explore the programming language many web developers switched to. |
 | 9 | Collaboration on GitHub | Forking, branches, pull requests, and working as a team on GitHub. |  |
-| 10 | Open Source Contribution | Use the knowledge that you’ve learned this quarter to make a contribution to one our our ICSSC projects! | [Unit 10](/course/unit10) |
+| 10 | Open Source Contribution | Use the knowledge that you’ve learned this quarter to make a contribution to one our our ICSSC projects! |
 
 ## <u>Course Content</u>
 
