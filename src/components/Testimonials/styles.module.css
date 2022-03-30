@@ -12,7 +12,7 @@ h2 {
 }
 
 .quotes {
-  margin-top: 1rem;
+  margin: 1rem;
   display: flex; 
   flex-direction: row; 
   flex-wrap: wrap; 
