@@ -6,11 +6,11 @@ sidebar_position: 4
 
 # Unit 4 Lecture Video
 
-[https://youtu.be/45teq99E4DA](https://youtu.be/45teq99E4DA)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/45teq99E4DA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
 
-[https://www.youtube.com/watch?v=ok-plXXHlWw](https://www.youtube.com/watch?v=ok-plXXHlWw)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ok-plXXHlWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[https://www.youtube.com/watch?v=OEV8gMkCHXQ](https://www.youtube.com/watch?v=OEV8gMkCHXQ)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OEV8gMkCHXQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # HTML (HyperText Markup Language)
 
@@ -226,9 +226,9 @@ For the above properties, they all can be set with certain units.
 The display property is one of the most important CSS properties for controlling layout. Focusing on the two main display property values. 
 
 - `inline` - Does not start on a newline and only takes up as much width as necessary.
-    - Examples of inline-level elements: <span>, <a>, <img>
+    - Examples of inline-level elements: `<span>`, `<a>`, `<img>`
 - `block` - Always starts on a new line and takes up the full width available.
-    - Examples of block-level elements: <div>, <p>, <h1> - <h6>
+    - Examples of block-level elements: `<div>`, `<p>`, `<h1>` - `<h6>`
 
 [display | CSS-Tricks](https://css-tricks.com/almanac/properties/d/display/)
 
