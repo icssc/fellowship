@@ -1,5 +1,6 @@
 ---
 sidebar_position: 0
+sidebar_label: Syllabus
 ---
 
 # ICSSC Projects Fellowship Syllabus
@@ -10,8 +11,6 @@ The goal of this course is to teach you fundamental software development and web
 This is an **asynchronous** course with prerecorded videos, weekly assignments, and virtual Discord Office Hours. You should be able to commit 2-3 hours per week for this Fellowship.
 
 *Disclaimer: This course is **not** for credit and is **not** affiliated with UCI.*
-
-💡 Want to join us in Spring 2022? Fill out this [interest form](https://forms.gle/St2ABHuisbaJZXSp9).
 
 ## <u>Instructors</u>
 
@@ -24,28 +23,28 @@ This is an **asynchronous** course with prerecorded videos, weekly assignments, 
 
 *This is our tentative course timeline and is subject to change.* 
 
-| Week | Topics | Content | Unit Page |
-| :--- | :--- | :--- | :--- |
-| 1 | Fellowship Application, GitHub | Apply to the Fellowship and get your GitHub setup. | [Unit 1](https://fellowship.icssc.club/docs/unit1) |
-| 2 | Terminal | The basics of the terminal. | [Unit 2](https://fellowship.icssc.club/docs/unit2) |
-| 3 | Git | The basics of git and how to use GitHub. | [Unit 3](https://fellowship.icssc.club/docs/unit3) |
-| 4 | HTML, CSS, JavaScript | Intro to web development. | [Unit 4](https://fellowship.icssc.club/docs/unit4) |
-| 5 | Resume Review, LinkedIn | Improve personal branding and get yourself ready for internship applications. | [Unit 5](https://fellowship.icssc.club/docs/unit5) |
-| 6 | React | Develop a website using one of the most popular JavaScript libraries. | [Unit 6](https://fellowship.icssc.club/docs/unit6) |
-| 7 | APIs, REST, GraphQL  | Learn about how to fetch information from APIs | [Unit 7](https://fellowship.icssc.club/docs/unit7) |
-| 8 | TypeScript | Explore the programming language many web developers switched to. | [Unit 8](https://fellowship.icssc.club/docs/unit8) |
+| Week | Topics | Content |
+| :--- | :--- | :--- |
+| 1 | Fellowship Application, GitHub | Apply to the Fellowship and get your GitHub setup. |
+| 2 | Terminal | The basics of the terminal. |
+| 3 | Git | The basics of git and how to use GitHub. |
+| 4 | HTML, CSS, JavaScript | Intro to web development. |
+| 5 | Resume Review, LinkedIn | Improve personal branding and get yourself ready for internship applications. |
+| 6 | React | Develop a website using one of the most popular JavaScript libraries. |
+| 7 | APIs, REST, GraphQL  | Learn about how to fetch information from APIs |
+| 8 | TypeScript | Explore the programming language many web developers switched to. |
 | 9 | Collaboration on GitHub | Forking, branches, pull requests, and working as a team on GitHub. |  |
-| 10 | Open Source Contribution | Use the knowledge that you’ve learned this quarter to make a contribution to one our our ICSSC projects! | [Unit 10](https://fellowship.icssc.club/docs/unit10) |
+| 10 | Open Source Contribution | Use the knowledge that you’ve learned this quarter to make a contribution to one our our ICSSC projects! |
 
 ## <u>Course Content</u>
 
-Every Monday, the unit for the week will be released on Notion. Each unit will contain a pre-recorded video, external resources, and your assignment(s) for the week. You can look through this material at your own pace at a time that is convenient for your schedule. 
+Every Monday, the unit for the week will be available on this website. Each unit will contain a pre-recorded video, external resources, and your assignment(s) for the week. You can look through this material at your own pace at a time that is convenient for your schedule. 
 
 We recommend reviewing the material as soon as possible though, so you can ask questions in Discord and/or Office Hours during the week.
 
 ### Assignments
 
-Assignments are **due Monday at 11:59pm.**
+Assignments are **due Monday at 11:59pm.** unless stated otherwise. 
 
 Each assignment will have a list of required tasks and a list of optional stretch goals for you to complete. You will receive a point for each task that you complete.
 
@@ -82,11 +81,10 @@ After joining the server, we will give you a `fellow` role, which grants you acc
 | 🔈 Office Hours | Voice channel for our weekly office hours. |
 | 🔈 Work Session | Voice channel for you to use  |
 
-### Notion - *Our Canvas*
+### Fellowship Website - *Our Canvas*
 
-All information about the Fellowship can be found on Notion. 
+All information about the Fellowship can be found at [fellowship.icssc.club](https://fellowship.icssc.club/course/syllabus). 
 
-Upon admission to the Fellowship, you will receive a link to our Notion dashboard. This dashboard is like our course’s Canvas and will be your primary resource hub during the quarter. 
 
 ## <u>Office Hours</u>
 

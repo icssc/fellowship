@@ -9,3 +9,9 @@
   height: 200px;
   width: 200px;
 }
+
+@media screen and (max-width: 996px) {
+  .feature {
+    margin: 1rem 0;
+  }
+}

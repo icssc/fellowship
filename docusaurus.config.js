@@ -7,10 +7,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'ICSSC Fellowship',
-  tagline: '🚧 This site is currently under construction 🚧',
+  tagline: 'A crash course on web development. 💻',
   url: 'https://fellowship.icssc.club',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'icssc-projects',
@@ -40,60 +40,26 @@ const config = {
         title: 'ICSSC Fellowship',
         logo: {
           alt: 'ICSSC Logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {
             type: 'doc',
-            docId: 'unit1',
+            docId: 'syllabus',
             position: 'left',
             label: 'Course',
           },
           {
-            href: 'https://github.com/icssc-projects',
-            label: 'GitHub',
+            href: 'https://discord.gg/GzF76D7UhY',
             position: 'right',
+            label: 'Discord'
           },
         ],
       },
       footer: {
-        style: 'dark',
         links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/syllabus',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
+            {label: "Discord", href:"https://discord.gg/GzF76D7UhY"},
+            {label: "GitHub", href: 'https://github.com/icssc-projects'}
         ],
         copyright: `Copyright © ${new Date().getFullYear()} ICS Student Council | Built with Docusaurus.`,
       },
@@ -101,6 +67,9 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      colorMode: {
+        defaultMode: 'dark'
+      }
     }),
 };
 
