@@ -9,7 +9,7 @@ By the end of the quarter, students will have the skillset necessary to create t
 All of our content can be found under the `/docs` directory. Each unit is written in Markdown, so it is easy for any to contribute.
 
 Find a bug or have a suggestion?  
-Create a [new issue](https://github.com/icssc-projects/fellowship/issues/new) on Github or open a pull request!
+Create a [new issue](https://github.com/icssc/fellowship/issues/new) on Github or open a pull request!
 
 ### Develop Locally
 To contribute to the Fellowship website:

@@ -13,7 +13,7 @@ const config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'icssc-projects',
+  organizationName: 'icssc',
   projectName: 'fellowship',
 
   presets: [
@@ -24,7 +24,7 @@ const config = {
         docs: {
           routeBasePath: "course",
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/icssc-projects/fellowship/tree/main/',
+          editUrl: 'https://github.com/icssc/fellowship/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -59,7 +59,7 @@ const config = {
       footer: {
         links: [
             {label: "Discord", href:"https://discord.gg/GzF76D7UhY"},
-            {label: "GitHub", href: 'https://github.com/icssc-projects'}
+            {label: "GitHub", href: 'https://github.com/icssc'}
         ],
         copyright: `Copyright © ${new Date().getFullYear()} ICS Student Council | Built with Docusaurus.`,
       },
