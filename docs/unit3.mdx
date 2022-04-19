@@ -9,7 +9,7 @@ import Video from '@site/src/components/Video';
 
 ## Welcome to Unit 3
 
-This week, we’ll be combining what we’ve done in the past 2 weeks, to learn more about Git, and how you can use it in your terminal.
+This week, we'll be combining what we've done in the past 2 weeks, to learn more about Git, and how you can use it in your terminal.
 
 ## Unit 3 Lecture Video
 
@@ -29,14 +29,14 @@ Git is the leading form of version control for source code. It is built around t
 
 **What is a repository?**
 
-A repository (also known as repo), is a collection of source code. It will contain all your project’s files and revision history. 
+A repository (also known as repo), is a collection of source code. It will contain all your project's files and revision history. 
 
 When working with Git, there are 4 fundamental elements: **Working Directory, Staging Area, Local Repo,** and **Remote Repo.** 
 
 - **Working Directory**  - Your working directory are the files on your computer.
 - **Staging Area**  - Once you make changes to a file, you can add it to the Staging Area, meaning that the file is ready to be committed.
 - **Local Repo** - Your local repo is stored on your computer, and is a clone of the Remote Repo.
-- **Remote Repo** - The remote repo is the repository, but it’s stored on a server miles away (such as GitHub).
+- **Remote Repo** - The remote repo is the repository, but it's stored on a server miles away (such as GitHub).
 
 ![Git Workflow Image](../static/img/unit3/git-workflow.png)
 
@@ -45,7 +45,7 @@ When working with Git, there are 4 fundamental elements: **Working Directory, St
 | Commands | Function |
 | --- | --- |
 | git clone <remote_repo_url>  | Creates a clone of the remote repository on your local computer. |
-| git init | Create a new git repository (note: you don’t need to do this if you use clone) |
+| git init | Create a new git repository (note: you don't need to do this if you use clone) |
 | git status | Lists all new or modified files to be committed. |
 | git add <file_name> | Adds specified files into the staging area, ready to be committed. |
 | git commit -m "COMMIT_MESSAGE" | Commits the staged files into your local repository. |
@@ -56,7 +56,7 @@ When working with Git, there are 4 fundamental elements: **Working Directory, St
 
 ### .gitconfig
 
-The `~/.gitconfig` file lives in your root directory (not in a repo) and stores user-specific configuration. You’ll want to update your email and name for this file by typing the following lines into your terminal:
+The `~/.gitconfig` file lives in your root directory (not in a repo) and stores user-specific configuration. You'll want to update your email and name for this file by typing the following lines into your terminal:
 
 ```bash
 # Set your email and name
@@ -76,9 +76,9 @@ The `.gitignore` file is a text file **inside of a repository** that tells Git w
 
 Writing in this file follow patterns you can use. 
 
-- `*` is used as a wildcard match
-- `/` is used to ignore pathnames relative to the `.gitignore` file
-- `#` is used to add comments to a `.gitignore` file
+- `*` is used as a wildcard match
+- `/` is used to ignore pathnames relative to the `.gitignore` file
+- `#` is used to add comments to a `.gitignore` file
 
 **Examples**
 
@@ -114,7 +114,7 @@ You **must** use SSH moving forward.
 `ssh-keygen -t ed25519 -C “your_email@example.com”`
 3. You can enter a passphrase or leave it blank. 
 A passphrase is not necessary but can add additional security. If you add a passphrase, then you will need to type in that phrase every time you use ssh.
-*(Personally, I don’t use a passphrase)*
+*(Personally, I don't use a passphrase)*
 
 ### Viewing your SSH Key
 
@@ -143,7 +143,7 @@ If you used the ed25519 algorithm to create your key, you should see 2 files:
 -  Clone your Profile README and push some changes (at least 1 new commit).
 -  Create a new repository for your personal website.
     -  Create an `index.html` file
-    -  Create a `README.md` file (it’s ok if there’s not much in there for now)
+    -  Create a `README.md` file (it's ok if there's not much in there for now)
 
 **Optional** **Stretch Goals**
 
@@ -157,7 +157,7 @@ Monday, April 18 by 11:59pm
 
 ### Submission
 
-Complete [Google Form](https://forms.gle/6MmqvLtr4YLWVhZV8).
+Complete the [Google Form](https://forms.gle/6MmqvLtr4YLWVhZV8).
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdRh6buY0w8TXrVPmjbXhKJ1gf0Kj-jVdidq4ftt2wfkC7fjg/viewform?embedded=true" width="100%" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 

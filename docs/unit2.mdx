@@ -9,7 +9,7 @@ import Video from '@site/src/components/Video';
 
 ## Welcome to Unit 2 ✌️
 
-In this unit, we will be going over how to use the terminal, or you may know it as the command line. Let’s get started!
+In this unit, we will be going over how to use the terminal, or you may know it as the command line. Let's get started!
 
 ## Unit 2 Lecture Video
 
@@ -46,9 +46,9 @@ A command is a special keyword you can use in your terminal to specify an action
 
 | Command | Function | Examples |
 | --- | --- | --- |
-| ls | Short for ‘list’, lists the files in the current directory. | `ls`, `ls Documents` |
+| ls | Short for 'list', lists the files in the current directory. | `ls`, `ls Documents` |
 | pwd | Prints the current working directory. This is also usually shown at the prompt line. | `pwd` |
-| cd | Known as change directory, this command changes the current directory in the file. | `cd Documents`, `cd ..` (If you don’t know what `..` is, google it!) |
+| cd | Known as change directory, this command changes the current directory in the file. | `cd Documents`, `cd ..` (If you don't know what `..` is, google it!) |
 | mkdir | Create a new directory.  | `mkdir NewFolder` |
 | rm | Removes files or directories. | `rm File` , `rm -r Folder` |
 | touch | Creates a file. | `touch hello.txt` |
@@ -67,7 +67,7 @@ An argument is passed into an argument to specify or provide more information to
 
 Options are flags or switches, that also give more information to the computer. However, unlike arguments, these are built-in and must match the syntax of the command. Usually, a flag might look like `ls -a` . Here, the `a` flag specifies to also list out hidden files.
 
-If you don’t know a command, or are looking for help, all commands have an option flag `--help`. This will print out a description of the command, and list out other arguments and options you can use. 
+If you don't know a command, or are looking for help, all commands have an option flag `--help`. This will print out a description of the command, and list out other arguments and options you can use. 
 
 ## Text Editors
 
@@ -77,7 +77,7 @@ When typing commands in terminal, you might find yourself looking to make a quic
 
 ![Vim](../static/img/unit2/vim.png)
 
-Vim is a lightweight text editor, you can use inside of your terminal. You will find that many programmers use this editor, known for its mouse-less interaction. However, it is a little complicated, so let’s get started.  
+Vim is a lightweight text editor, you can use inside of your terminal. You will find that many programmers use this editor, known for its mouse-less interaction. However, it is a little complicated, so let's get started.  
  
 **Opening a File**  To open a file just type in `vim FILE_NAME` into your terminal.  This should open up the vim editor in your terminal. 
 
@@ -85,17 +85,17 @@ Vim is a lightweight text editor, you can use inside of your terminal. You will 
 
 There are 2 main modes that you will be using in Vim — **command mode** and **insert mode**. When you first open up a file, you will be in command mode. You will notice that typing inside the text will not insert any characters. Instead, your keys are different commands that let you move your cursor, or change modes. You can check out this Vim [cheatsheet](https://vim.rtorr.com/) for all the possible commands.
 
-The most important one will be hitting *i* (for “insert”), which will change to insert mode. In insert mode, you will be able to type as expected. If you want to leave this mode, just press Escape, and you’ll switch back to command mode. 
+The most important one will be hitting *i* (for “insert”), which will change to insert mode. In insert mode, you will be able to type as expected. If you want to leave this mode, just press Escape, and you'll switch back to command mode. 
 
 **Saving the File**
 
-To save and exit the file, make sure you’re in command mode. Press : and you will be in last-line mode. In this mode, you can enter commands like `:w` to save or `:q` to exit. You can even combine these and type `:wq` to save and exit.
+To save and exit the file, make sure you're in command mode. Press : and you will be in last-line mode. In this mode, you can enter commands like `:w` to save or `:q` to exit. You can even combine these and type `:wq` to save and exit.
 
 ### Nano
 
 ![Nano](../static/img/unit2/nano.png)
 
-Nano is another text editor built into your terminal. It is a simpler than Vim, because it doesn’t have any modes. 
+Nano is another text editor built into your terminal. It is a simpler than Vim, because it doesn't have any modes. 
 
 **Opening a File**
 
@@ -124,7 +124,7 @@ If you are on MacOS (post Catalina) you may have a `.zshrc` file instead.
 This file will run every time that you start a new terminal. Inside of it, you can add your own custom aliases, functions, and customize you prompt.
 
 <aside>
-💡 When you make changes to the `.bashrc` or `.zshrc`, those changes won’t take effect until open up a new Terminal window or run `source .bashrc` (`source .zshrc` on Mac)
+💡 When you make changes to the `.bashrc` or `.zshrc`, those changes won't take effect until open up a new Terminal window or run `source .bashrc` (`source .zshrc` on Mac)
 
 </aside>
 
@@ -149,7 +149,7 @@ You can learn more about functions [here](https://linuxize.com/post/bash-functio
 
 ### Customizing Your Prompt
 
-There are lots of things you can do with your prompt. It can print the current directory you’re in, show the time, display the git branch, and more. You can even add colors! This is done using special prompt characters.
+There are lots of things you can do with your prompt. It can print the current directory you're in, show the time, display the git branch, and more. You can even add colors! This is done using special prompt characters.
 *Note: the special characters may differ between `.bashrc` and `.zshrc`.*
 
 In `.bashrc`, for example, `\d` will print the date, `\u` will print the current user, and **`\w`** will print the current user. You can find a list of commands in this [Bash Prompt Guide](https://ss64.com/bash/syntax-prompt.html).
