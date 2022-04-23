@@ -1,6 +1,9 @@
 ---
 sidebar_position: 5
+sidebar_label: "Unit 5: Personal Branding"
 ---
+
+import Video from '@site/src/components/Video';
 
 # Unit 5: Personal Branding
 
@@ -10,13 +13,13 @@ This week we take a quick detour to discuss personal branding! When it comes to 
 
 ## Unit 5 Lecture Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/O-2x0eAMPss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+<Video src="https://www.youtube.com/embed/O-2x0eAMPss" />
 
 ## Resume
 
 ### Parts of your Resume
 
-You resume should have the following parts:
+Your resume should have the following parts:
 
 - Header
     - Contact Info: Name, Phone, Non-UCI email
@@ -36,33 +39,45 @@ You resume should have the following parts:
     - Short description
     - Link to Github or website (if possible)
 
-### Do’s and Don’ts
+### Do's and Don'ts
 
-**Should** include
+<div style={{display: "flex", flexDirection: "row", gap: "3em", flexWrap: "wrap"}}>
+  <div>
+    <b>Should</b> include
+    <ul>
+    <li>Name</li>
+    <li>Phone and non-edu email</li>
+    <li>LinkedIn, GitHub, Website</li>
+    <li>
+        Education
+        <ul>
+          <li>“University of California, Irvine”</li>
+          <li>Major</li>
+          <li>Graduation date</li>
+          <li>[Optional] GPA if above a 3.0</li>
+        </ul>
+    </li>
+    <li>Work Experience</li>
+    <li>Personal Projects</li>
+    <li>Leadership Experience</li>
+    <li>[Optional] Skills</li>
+    <li>[Optional] Relevant coursework</li>
+    </ul>
+  </div>
+  <div>
+    Should <b>NOT</b> include
+    <ul>
+      <li>Profile picture</li>
+      <li>Protected categories (race, gender, sexuality, etc.)</li>
+      <li>Objective or Biography</li>
+      <li>Unrelated hobbies</li>
+      <li>2 column format</li>
+      <li>Excessive design elements</li>
+      <li>Random skill metric</li>
+    </ul>
+  </div>
+</div>
 
-- Name
-- Phone and non-edu email
-- LinkedIn, GitHub, Website
-- Education
-    - “University of California, Irvine”
-    - Major
-    - Graduation date
-    - GPA if above a 3.0
-- Work Experience
-- Personal Projects
-- Leadership Experience
-- [Optional] Skills
-- [Optional] Relevant coursework
-
-Should **NOT** include
-
-- Profile picture
-- Protected categories (race, gender, sexuality, etc.)
-- Objective or Biography
-- Unrelated hobbies
-- 2 column format
-- Excessive design elements
-- Random skill metric
 
 ### Tips
 
@@ -102,15 +117,14 @@ git commit -m "Add resume"
 
 OR
 
-Go to your repo’s GitHub page and upload the resume.pdf file
+Go to your repo's GitHub page and upload the resume.pdf file
+![Uploading a file to GitHub](../static/img/unit5/github-upload.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cb222bda-26ab-4a34-9c2b-5a468415c9b1/Untitled.png)
-
-### Redirecting from GitHub’s 404 page
+### Redirecting from GitHub's 404 page
 
 You can access your resume by going to `username.github.io/resume.pdf`. 
 
-But what happens if someone goes to `username.github.io/resume` without `.pdf` on the end? You’ll get a 404 error! This is because GitHub doesn’t know where to send the user when they don’t include the file extension. 
+But what happens if someone goes to `username.github.io/resume` without `.pdf` on the end? You'll get a 404 error! This is because GitHub doesn't know where to send the user when they don't include the file extension. 
 
 However, we can provide our own 404 page and have it immediately redirect to the desired location. The idea is this:
 
@@ -125,30 +139,35 @@ Add your own `404.html` file to your project. Instead of the head add a `<script
 <html>
   <head>
     <meta charset="utf-8">
+    <!-- TODO: Replace title with your website's name-->
     <title>Chase Carnaroli</title>
     <script type="text/javascript">
       // Dictionary that has all of your redirect rules
-			// You can add additional redirects if you'd like
-			const redirects = {
+      // You can add additional redirects if you'd like
+      // e.g. /resume -> /resume.pdf
+      const redirects = {
         "resume": "resume.pdf"
       }
 
-			// window.location.pathname -> Get the path -> /resume
-			// .substring(1) -> remove the first character -> resume
-			// .toLowerCase() -> make sure the path name is all lowercase       
+      // window.location.pathname -> Get the path -> /resume
+      // .substring(1) -> remove the first character -> resume
+      // .toLowerCase() -> make sure the path name is all lowercase       
       const path = window.location.pathname.substring(1).toLowerCase();
 
       const redirect = redirects[path];
       if (redirect) {
-				// Redirect to the desired location
+        // Redirect to the desired location
         window.location.replace(redirect);
       } else {
-				// If the path doesn't exist, you can redirect to your main page
-        window.location.replace("https://www.chasecarnaroli.com");
+        // If the path doesn't exist, you can redirect to your main page or
+        // you can remove this line of code if you just want to show the 404 page.
+        window.location.replace("https://www.chasecarnaroli.com"); // TODO: add your website
       }
     </script>
   </head>
-
+  <body>
+    <h1>404 Not Found</h1>
+  </body>
 </html>
 ```
 
@@ -160,45 +179,45 @@ Take sometime to fill out your profile!
 
 ### Update your LinkedIn URL
 
-By default your LinkedIn URL is your name+random characters. This looks unprofessional. Thankfully, you can update the URL to be whatever you’d like! I’d recommend doing your first+last name.
+By default your LinkedIn URL is your name+random characters. This looks unprofessional. Thankfully, you can update the URL to be whatever you'd like! I'd recommend doing your first+last name.
 
 - Navigate to [https://www.linkedin.com/public-profile/settings](https://www.linkedin.com/public-profile/settings)
 - In the top right corner, edit your custom URL
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7d5a585c-4c42-4995-bd54-169b529ea427/Untitled.png)
+  ![Adding a custom url on LinkedIn](../static/img/unit5/linkedin-custom-url.png)
     
 
 ## Assignment
 
-These week, your assignment is to create a resume and a LinkedIn
+These week, your assignment is to create a resume and a LinkedIn.
 
 ### Deliverables
 
 **Required Tasks**
 
-- [ ]  Create a LinkedIn
-    - [ ]  Add your education
-    - [ ]  Update your LinkedIn URL
-- [ ]  Create a Resume with the following
-    - [ ]  Your education
-    - [ ]  Links to your website, LinkedIn, and GitHub
-    - [ ]  Previous Work or Volunteer Experience
-- [ ]  Add your resume to your website (e.g. `chasec99.github.io/resume.pdf`)
+-  Create a LinkedIn
+    -  Add your education
+    -  Update your LinkedIn URL
+-  Create a Resume with the following
+    -  Your education
+    -  Links to your website, LinkedIn, and GitHub
+    -  Previous Work or Volunteer Experience
+-  Add your resume to your website (e.g. `chasec99.github.io/resume.pdf`)
 
 **Optional** **Stretch Goals**
 
-- [ ]  Post your LinkedIn url in the [Discord thread](https://ptb.discord.com/channels/772739905981644850/927468256070086696/938703099470704700) and connect with others in the Fellowship!
-- [ ]  Sign up to review another resume
+- Post your LinkedIn url in the Discord thread and connect with others in the Fellowship!
+- Sign up to review another resume on the submission form.
 
 ### Due Date
 
-Monday, February 7 by 11:59pm
+Monday, May 2 by 11:59pm
 
 ### Submission
 
-Complete the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSe346dTGIyWBqGoFc3XNKbrXh5Aks2hsI5ME9ZDVbsGMWYWXQ/viewform?usp=sf_link). Please use your UCI email. 
+Complete the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSe346dTGIyWBqGoFc3XNKbrXh5Aks2hsI5ME9ZDVbsGMWYWXQ/viewform?usp=sf_link).
+Please use your UCI email. 
 
-[https://docs.google.com/forms/d/e/1FAIpQLSe346dTGIyWBqGoFc3XNKbrXh5Aks2hsI5ME9ZDVbsGMWYWXQ/viewform?usp=sf_link](https://docs.google.com/forms/d/e/1FAIpQLSe346dTGIyWBqGoFc3XNKbrXh5Aks2hsI5ME9ZDVbsGMWYWXQ/viewform?usp=sf_link)
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe346dTGIyWBqGoFc3XNKbrXh5Aks2hsI5ME9ZDVbsGMWYWXQ/viewform?embedded=true" width="100%" height="1800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 ## External Resources
 
