@@ -50,42 +50,6 @@ var a = 'abc' // Defined globally.
 const pi = '3.14'; //this variable cannot ever be changed.
 ```
 
-### Loops and Conditionals
-
-JavaScript uses curly brackets `{}`, to denote code blocks for ifs, and loops. 
-
-```javascript
-if (i > 5) {
-	console.log('i is bigger than 5');
-} else if (i >= 3) {
-	console.log('i is between 3 and 5');
-} else {
-	console.log('i is less than 3');
-}
-for (let x = 0; x < 5; x++) {
-	console.log(x);
-}
-while (true) {
-	console.log("repeat");
-}
-```
-
-We can also use for-each loops in javascript, but only for arrays. 
-```javascript
-const array = ["one", "two", "three"]
-array.forEach(function (item, index) {
-  console.log(item, index);
-});
-```
-
-In fact, JavaScript also has something cool called a for-of loop. This lets us loop through iterables like strings and arrays.
-```javascript
-const str = "fellowship"
-for (const element of str) {
-  console.log(element);
-}
-```
-
 
 ### Strings
 
@@ -118,6 +82,78 @@ console.log(str); //=> "a-b-c-1-2-3-4"
 var oIndex = array.indexOf('x'); //=> 3
 ```
 
+JavaScript arrays also have methods that help us create and modify arrays. These are the map, filter and reduce functions. These will 
+iterate over an array and perform a transformation or computation. Then they will return a new array based on the result of the function
+
+#### Map
+The `map()` function creates a new array from an existing one. It applies a function to each one of the elements of the first array.
+```javascript
+const numbers = [1, 2, 3, 4];
+const doubled = numbers.map(function(item) {
+	return item * 2;
+});
+console.log(doubled); // [2, 4, 6, 8]
+```
+
+#### Filter
+The `filter()` function applies a conditional to each element in the array. If the conditional is true, the element is pushed in the output array.
+```javascript
+onst numbers = [1, 2, 3, 4];
+const evens = numbers.filter(function(item) {
+	return item % 2 === 0;
+});
+console.log(evens); // [2, 4]
+```
+
+#### Reduce
+The `reduce()` function rerduces the values of an array to just one value. It does so by accumulating a value as it iterates through the array.
+```javascript
+const numbers = [1, 2, 3, 4];
+//result is the accumulator - the returned value of the previous iteration
+//item is the current item in the array.
+const sum = numbers.reduce(function (result, item) {
+  return result + item;
+}, 0);
+console.log(sum); // 10
+```
+
+### Loops and Conditionals
+
+JavaScript uses curly brackets `{}`, to denote code blocks for ifs, and loops. 
+
+```javascript
+if (i > 5) {
+	console.log('i is bigger than 5');
+} else if (i >= 3) {
+	console.log('i is between 3 and 5');
+} else {
+	console.log('i is less than 3');
+}
+for (let x = 0; x < 5; x++) {
+	console.log(x);
+}
+while (true) {
+	console.log("repeat");
+}
+```
+
+We can also use for-each loops in javascript, but only for arrays. This is similar to the map, filter and reduce function mentioned in the previous section. 
+This uses a callback function, more on this [later](#callback-functions).
+```javascript
+const array = ["one", "two", "three"]
+array.forEach(function (item, index) { // notice how a function is passed into forEach function call.
+  console.log(item, index);
+});
+```
+
+In fact, JavaScript also has something cool called a for-of loop. This lets us loop through iterables like strings and arrays.
+```javascript
+const str = "fellowship"
+for (const element of str) {
+  console.log(element);
+}
+```
+
 ### Objects
 
 Similar to Python Dictionaries, these are an unordered set of key-value pairs. Unlike python, you don't need quotes around the keys. 
@@ -132,7 +168,6 @@ console.log(ages.bob); // 35
 ```
 
 ### Functions
-
 Define the `sayHello` function that takes in two parameters, `firstName`, and `lastName`.  In JavaScript, parameters are optional. 
 
 ```javascript
@@ -142,12 +177,21 @@ function sayHello(firstName, lastName) {
 
 console.log(sayHello("Raman", "Gupta")); // Hello, Raman Gupta
 console.log(sayHello()); // Hello, undefined undefined
+```
 
-//another way to define a function with =>
+#### Arrow Functions
+Arrow functions are a newer feature of JavaScript, and let us write functions with much shorter syntax. 
+```javascript
 let otherSayHello = (firstName, lastName) => {
 	return "Hello, " + firstName + " " + lastName;
 };
 ```
+Arrow functions return a value by default, so if it only requires one statement to write the function, we can cut it even shorter. 
+
+```javascript
+let otherSayHello = (firstName, lastName) => "Hello, " + firstName + " " + lastName;
+```
+
 
 ### Callback Functions
 
@@ -160,7 +204,9 @@ var printItem = function(item) {
  console.log(item);
 }
 array.forEach(printItem);
-//more common to use anonymous function
+```
+We can use anonymous functions to reduce how much code we write even more. This way we don't have to give each function a name.
+```javascript
 array.forEach(function(item) {
  console.log(item);
 });
