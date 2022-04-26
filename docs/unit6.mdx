@@ -1,51 +1,27 @@
 ---
 sidebar_position: 6
-sidebar_label: "Unit 6: React"
+sidebar_label: "Unit 6: JavaScript"
 ---
 
 import Video from '@site/src/components/Video';
 
-# Unit 6: Intro to React
+# Unit 6: Scripting with JavaScript
 
 ## Welcome to Unit 6
 
-It's time to talk about one of the most popular JavaScript libraries for building a website: React! Rather than using plain HTML, CSS, and JavaScript in our website, React lets us create more complex user interfaces more efficiently. 
+JavaScript is the world's most popular programming language, also considered the programming language of the web. Many web developers use 
+JavaScript to create websites and add behavior to them.
 
 ## Unit 6 Lecture Video
-<Video src="https://www.youtube.com/embed/x_J0zAbFx5Y" />
+<!-- TODO
+<Video src="https://www.youtube.com/embed/x_J0zAbFx5Y" /> -->
 
 <Video src="https://www.youtube.com/embed/DHjqpvDnNGE" />
-
-<Video src="https://www.youtube.com/embed/Tn6-PIqc4UM" />
-
-## What is React?
-
-React is a JavaScript library to build user interfaces, usually websites. Created by Facebook(Meta?) in 2013, it is continually being developed in the open-source community. 
-
-**React Notable Features**
-
-- **Declarative -**
-    
-    React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
-    
-    Declarative views make your code more predictable and easier to debug.
-    
-- **Component-Based -**
-    
-    Build encapsulated components that manage their own state, then compose them to make complex UIs.
-    
-    Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep state out of the HTML.
-    
-- **Learn Once, Write Anywhere -**
-    
-    We don't make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code.
-    
-    React can also render on the server using Node and power mobile apps using [React Native](https://reactnative.dev/).
     
 
 ## JavaScript
 
-We haven't gone much into depth about JavaScript, but good thing is it's very similar to many languages you might have used before (Python, Java). Here's a quick overview of the basics.
+JavaScript is a high-level language and is very similar to many languages you might have used before (Python, Java). Here's a quick overview of the basics.
 
 ### Printing
 
@@ -169,374 +145,7 @@ If JavaScript is new to you, or you are curious, it might be helpful to check ou
 
 [JavaScript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-## JSX
 
-Alright, one more small thing before we dive in to React! React uses JavaScript, but more specifically, it's called JSX. This is a syntax extension to JavaScript. 
-
-```jsx'
-// an example of JSX
-const element = <h1>Hello, world!</h1>;
-```
-
-JSX combines our markup language (HTML-like), and our logic (JavaScript). This lets us combine all this into one file and make coding a little easier. How? JSX lets us embed JavaScript expressions with curly brackets `{}`. 
-
-```jsx
-const name = 'Raman Gupta';
-const element = <h1>Hello, {name}</h1>;
-//we can do this in element attributes as well
-const imgURL = "./path/to/image.png"
-const imgElement = <img src={imgURL} />;
-// we use className instead of class to give elements a class
-const withClass= <h2 className="example" />;
-```
-
-While React doesn't require using JSX, JSX is really helpful as a visual aid, and we will be using it in this lesson.
-
-## React Components
-
-Alright, you've waited long enough. Back to React! React is built upon many components. React Components help us split the UI into smaller, isolated and reusable pieces, each with their own logic and markup. 
-
-Here's an example: 
-
-```jsx
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
-}
-
-// Example usage: <Welcome name="Mark" />
-```
-
-ShoppingList is a **React component class.** A component takes in parameters called `props` (short for “properties”), and returns a hierarchy of views to display. 
-
-React renders elements in the React DOM (or Document Object Model). The DOM is a structured representation of the HTML elements in the web app. It is represented as a tree structure with each node being a UI element in the document. There's a lot more to understand about the DOM, but we won't go into further detail. You can learn more here:
-
-[DOM (Document Object Model) - GeeksforGeeks](https://www.geeksforgeeks.org/dom-document-object-model/)
-
-### React Elements
-
-This component returns what we want our user to see on their screen. More specifically, the function returns a **React element**. Components are made of a hierarchy of elements. 
-
-- The above example really looks like this (Beware, the code is not pretty):
-    
-    ```jsx
-    React.createElement("div", {
-      className: "shopping-list"
-    }, React.createElement("h1", null, "Shopping List for ", props.name), 
-    	 React.createElement("ul", null, 
-    			React.createElement("li", null, "Instagram"), 
-    			React.createElement("li", null, "WhatsApp"), 
-    			React.createElement("li", null, "Oculus")
-    		)
-    );
-    ```
-    
-
-It doesn't look that nice, so we will stick with using JSX. 
-
-### Defining a Component
-
-There are 2 main ways you define a component: 
-
-- JavaScript Function
-    
-    ```jsx
-    function Welcome(props) {
-      return <h1>Hello, {props.name}</h1>;
-    }
-    ```
-    
-- An ES6 class
-    
-    ```jsx
-    class Welcome extends React.Component {
-      render() {
-        return <h1>Hello, {this.props.name}</h1>;
-      }
-    }
-    ```
-    
-
-Both of these are the exact same in React. Once a component is defined, these can be used as its own element. 
-
-```jsx
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
-}
-
-function App() {
-  return (
-    <div>
-      <Welcome name="Sara" />
-      <Welcome name="Cahal" />
-      <Welcome name="Edite" />
-    </div>
-  );
-}
-
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
-```
-
-In modern React, we will use functions to define components, and other methods called `Hooks` , which let us use more React features. More on this later. 
-
-### Props
-
-In a lot of the previous examples, you have seen `props` a lot, but what are props? Props lets us pass data between components. 
-
-When we write something like this below, we are passing data to the `Welcome` component. 
-
-```jsx
-<Welcome name="Sara" />
-```
-
-In this instance of the `Welcome` component, it can access this data using the `props` variable. Props are treated exactly like attributes of an element in HTML. You can pass in as many as you want. 
-
-```jsx
-<Welcome name="Sara" title="Ms." />
-//In the component the props object would look like this:
-props = {
-	"name": "Sara",
-	"title": "Ms."
-}
-//We can use props like this
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
-}
-```
-
-> Props are read-only. In a component declaration, you can never modify its own props.
-> 
-
-## Hooks
-
-Hooks are a new addition to React, and let us use React features without defining a class. Instead of defining components as a React class, we will be defining them as functions, and using Hooks to access the React state and lifecycle features of a component.
-
-### What is a Hook?
-
-A Hook is a special function that lets you “hook into” React features. For example, `useState` is a Hook that lets you add React state to function components. 
-
-### State Hook
-
-When data changes, you will want to update your component, so that it shows new data. Components keep track of its data through its `state` variable. The `state` is very similar to props, but it is private to the component, and can only be controlled by the component. 
-
-We can use this simple class as an example. 
-
-```jsx
-import React, { useState } from 'react';
-
-function Example() {
-  // Declare a new state variable, which we'll call "count"
-  const [count, setCount] = useState(0);
-
-  return (
-      <div>        
-          <h1>Hello, world!</h1>
-          <h2>The counter is at {count}.</h2>
-          <button onClick={() => setCount(count + 1)}>
-		        Increment!
-		      </button>
-      </div>
-    );
-}
-```
-
-There's a lot going on here, so let's break it up:
-
-1. `useState` is a Hook, that we call inside a function Component to give it a local state. A state lets us preserve these values after the function call ends. 
-    1. We pass in an argument to initialize the state, which is `0`. 
-    2. `useState` returns a pair: the current state value `count`, and a function that lets you update the state to a new value `setCount`
-        1. We use syntax called “array destructuring”. Also in python, this lets us set variables to individual items in an array.
-2. For the function component we return the markup for the component. Notice the use of curly brackets around our JavaScript.
-    1. In `<h2>`, we refer to our state variable to display the current count: `count`
-    2. In `<button>`, we attach the function call `() => setCount(count + 1)}` so when the button is clicked, the `setCount` is called, updating our State, and re-rendering our component. 
-    3. There is some wonky syntax we are using. We are defining an arrow `=>` function that takes in no parameters, and in the function body we call `setCount(count + 1)}`.
-
-> Note that `count` is a const, so we cannot do something like `count = 5`
-> 
-
-We can also declare multiple state variables
-
-```jsx
-// Declare multiple state variables!
-const [age, setAge] = useState(42);
-const [fruit, setFruit] = useState('banana');
-const [todos, setTodos] = useState([{ text: 'Learn Hooks' }]);
-```
-
-### Effect Hook
-
-The Effect Hook lets us perform side effects after our function component is rendered. `useEffect` tells React to call the function passed to it, after every time the component is rendered. 
-
-```jsx
-import React, { useState, useEffect } from 'react';
-
-function Example() {
-  const [count, setCount] = useState(0);
-
-	useEffect(() => {
-    document.title = `You clicked ${count} times`;
-  });
-
-  return (
-      <div>        
-          <h1>Hello, world!</h1>
-          <h2>The counter is at {count}.</h2>
-          <button onClick={() => setCount(count + 1)}>
-		        Increment!
-		      </button>
-      </div>
-    );
-}
-```
-
-In this example, we pass to `useEffect` a function that sets the document title. We can also access the state variables in this function, because we define it inside our function component.
-
-### Rules for Hooks
-
-- Always use hooks at the top level. Don't call them inside nested functions, loops, or conditionals. If you want to use a conditional, place it inside the function.
-- Only call Hooks from React function components.
-
-There are many more hooks that you can use in React. Check them out in the official documentation.
-
-[Hooks API Reference - React](https://reactjs.org/docs/hooks-reference.html)
-
-## More Cool Features of React
-
-### Conditional Rendering
-
-We can choose to render a component/element based on a condition. Here, we only display the message, if `unreadMessages.length > 0`. 
-
-```jsx
-function Mailbox(props) {
-  const unreadMessages = props.unreadMessages;
-  return (
-    <div>
-      <h1>Hello!</h1>
-      {unreadMessages.length > 0 &&
-        <h2>
-          You have {unreadMessages.length} unread messages.
-        </h2>
-      }
-    </div>
-  );
-}
-```
-
-### Rendering Multiple Components with Lists
-
-We can render multiple elements by iterating through arrays. This is a basic List Component. 
-
-```jsx
-function NumberList(props) {
-  const numbers = props.numbers;
-  const listItems = numbers.map((number) =>
-    <li key={number.toString()}>
-      {number}
-    </li>
-  );
-  return (
-		<ul>
-      {numbers.map((number) =>
-        <li key={number.toString()}>
-		      {number}
-		    </li>
-      )}
-    </ul>
-  );
-}
-```
-
-You'll notice that each list item has an attribute `key`. Keys are helpful for React to identify which items have changed, been added, or been removed. These should be unique identifiers for each item.
-
-### Styling with React
-
-To add CSS styling in React, we just have to add a line at the top to import our CSS files. Remember in JSX, we use `className`, to give an element a class. 
-
-```jsx
-import "./Example.css"
-
-function Example(props) {
-    return (
-        <h1 className="example">
-            Hello, world!
-        </h1>
-    )
-}
-```
-
-## Setting up React
-
-We will be using `nvm` to install Node. Nvm makes it easier to jump between versions of node, which you will need for some projects. 
-
-Open up your terminal and run this command. 
-
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-```
-
-Close and re-open your terminal, and nvm will be installed. 
-
-We will be using version 16.13.2 of node so run these commands. 
-
-```bash
-nvm install node
-nvm install v16.13.2
-```
-
-You can check node is installed with this command. 
-
-```bash
-node --version
-```
-
-Now that node is installed, it also comes with `npm` a package manager for node. `npx` is a package runner that is pre-bundled with `npm`. We use `npx` to create our first react app. 
-
-Navigate to a directory where you want to create your project. Then, run the command: 
-
-```bash
-npx create-react-app my-app
-```
-
-`my-app` is the name of your app, and can be set to anything you want.
-
-This will run some scripts, and eventually finish creating your folder `my-app`. Change into your project folder and run:
-
-```bash
-npm start
-```
-
-This will run the react app, and you will be able to see it in your browser. It will open automatically in your default browser and you will be able to see the base React project. If it doesn't open up, scroll up in your terminal, and it will tell you the URL you can find the react app at. Mine is **http://localhost:3000**
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8f6ba7f9-1638-40d0-81e7-5d2d83c07256/Untitled.png)
-
-## Deploying React to GitHub Pages
-
-We can also share our new React website with GitHub Pages as well! This is a little less straightforward, since we are using React. We are going to have to install `gh-pages` , a node module that lets us publish to GitHub pages. 
-
-```bash
-npm install gh-pages --save-dev
-```
-
-In our React project, open `package.json`. Add this property:
-
-```json
-“homepage”: “https://<your-github-username>.github.io/repository-name”.
-```
-
-Under `scripts` in your `package.json`, add this as well 
-
-```json
-"predeploy": "npm run build",
-"deploy": "gh-pages -d build"
-```
-
-Then, you can run, and it will deploy your app to the url above. Anytime you make changes, you just have to run this command, and it will automatically deploy the changes to your website!
-
-```bash
-npm run deploy
-```
 
 ## Assignment
 
@@ -544,21 +153,11 @@ This week, we will be making a website showing off our favorite UCI classes. The
 
 **Required Tasks**
 
--   Create a GitHub Repo of your project
--   Create a Home Component
-    -   Has a Form with a text input and submit button
-    -   Change state on typing input
-    -   Add a Class when submitting form
-    -   Styled with CSS
--   Create a Class Component
-    -   Uses props
-    -   Styled with CSS
--   Deploy your website to GitHub Pages
+-   
 
 **Optional Stretch Goals**
 
--   Use Flexbox to style your website!
--   Change the Page Title
+-   
 
 ### Due Date
 
@@ -578,13 +177,3 @@ JavaScript
 - [https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [https://www.w3schools.com/js/default.asp](https://www.w3schools.com/js/default.asp)
 
-React has a lot of resources on its own website, that are really useful
-
-- [https://reactjs.org/tutorial/tutorial.html](https://reactjs.org/tutorial/tutorial.html)
-- [https://reactjs.org/docs/hello-world.html](https://reactjs.org/docs/hello-world.html)
-- [https://reactjs.org/docs/hooks-reference.html](https://reactjs.org/docs/hooks-reference.html)
-
-A very cool React Tutorial
-
-- [https://react-tutorial.app/app.html](https://react-tutorial.app/app.html)
-- [https://learnjavascript.online/app.html](https://learnjavascript.online/app.html) (They have a JavaScript one too!)

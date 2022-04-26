@@ -30,10 +30,10 @@ This is an **asynchronous** course with prerecorded videos, weekly assignments, 
 | 3 | Git | The basics of git and how to use GitHub. |
 | 4 | HTML, CSS, JavaScript | Intro to web development. |
 | 5 | Resume Review, LinkedIn | Improve personal branding and get yourself ready for internship applications. |
-| 6 | React | Develop a website using one of the most popular JavaScript libraries. |
-| 7 | APIs, REST, GraphQL  | Learn about how to fetch information from APIs |
-| 8 | TypeScript | Explore the programming language many web developers switched to. |
-| 9 | Collaboration on GitHub | Forking, branches, pull requests, and working as a team on GitHub. |  |
+| 6 | JavaScript | Learn the most popular programming language, JavaScript. |
+| 7 | React | Develop a website using one of the most popular JavaScript libraries. |
+| 8 | APIs, REST, GraphQL  | Learn about how to fetch information from APIs.|
+| 9 | TypeScript | Explore the programming language many web developers switched to. |
 | 10 | Open Source Contribution | Use the knowledge that you’ve learned this quarter to make a contribution to one our our ICSSC projects! |
 
 ## <u>Course Content</u>
