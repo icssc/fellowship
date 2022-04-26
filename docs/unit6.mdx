@@ -25,7 +25,7 @@ JavaScript is a high-level language and is very similar to many languages you mi
 
 ### Printing
 
-```jsx
+```javascript
 console.log("Hello, World!"); 
 // In Web Development, this will actually show up in the developer console. 
 // Open the console in Chrome with cmd+alt+j (mac) or ctrl+shift+j (windows)
@@ -35,7 +35,7 @@ console.log("Hello, World!");
 
 Variables are dynamically-typed, meaning, they don't have a type (like in Python). Undefined variables have the value `undefined`. We use `let` and `const` to define variables.
 
-```jsx
+```javascript
 let x = 'hello';
 let y = 1234;
 let z = false;
@@ -46,7 +46,7 @@ const pi = '3.14'; //this variable cannot ever be changed.
 
 JavaScript uses curly brackets `{}`, to denote code blocks for ifs, and loops. 
 
-```jsx
+```javascript
 if (i > 5) {
 	console.log('i is bigger than 5');
 } else if (i >= 3) {
@@ -64,7 +64,7 @@ while (true) {
 
 ### Strings
 
-```jsx
+```javascript
 let clubName = 'icssc';
 console.log(className); //icssc
 className = className.toUpperCase();
@@ -78,7 +78,7 @@ console.log(className.indexOf('SSC') >= 0); //whether substring appears
 
 Arrays are almost exactly the same as they are in Python.
 
-```jsx
+```javascript
 var array = ['a', 'b', 'c', 1, 2, 3];
 console.log( array[2] ); // "c"
 console.log( array.length );// 6
@@ -97,7 +97,7 @@ var oIndex = array.indexOf('x'); //=> 3
 
 Similar to Python Dictionaries, these are an unordered set of key-value pairs. Unlike python, you don't need quotes around the keys. 
 
-```jsx
+```javascript
 ages = {alice:40, bob:35, charles:13}
 things = {num:12, dog:'woof', list:[1,2,3]}
 
@@ -110,7 +110,7 @@ console.log(ages.bob); // 35
 
 Define the `sayHello` function that takes in two parameters, `firstName`, and `lastName`.  In JavaScript, parameters are optional. 
 
-```jsx
+```javascript
 function sayHello(firstName, lastName) {
 	return "Hello, " + firstName + " " + lastName;
 }
@@ -128,7 +128,7 @@ let otherSayHello = (firstName, lastName) => {
 
 Functions are objects, and can be passed as arguments to other function calls. 
 
-```jsx
+```javascript
 //Iterate through an array
 var array = ['a','b','c'];
 var printItem = function(item) {
