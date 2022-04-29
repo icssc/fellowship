@@ -56,8 +56,10 @@ const pi = '3.14'; //this variable cannot ever be changed.
 ```javascript
 let clubName = 'icssc';
 console.log(className); //icssc
+console.log(className.length) // 5
 className = className.toUpperCase();
 console.log(className); //ICSSC
+console.log(classname + " Projects");
 let part = className.substring(1, 4);
 console.log(part); //CSS
 console.log(className.indexOf('SSC') >= 0); //whether substring appears
@@ -216,19 +218,116 @@ If JavaScript is new to you, or you are curious, it might be helpful to check ou
 
 [JavaScript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
+## Setting up JavaScript and Node.js
+We will be using `nvm` to install Node. Nvm makes it easier to jump between versions of node, which you will need for some projects. 
 
+### Node.js
+
+Open up your terminal and run this command. 
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
+
+Close and re-open your terminal, and nvm will be installed. 
+
+We will be using version 16.13.2 of node so run these commands. 
+
+```bash
+nvm install node
+nvm install v16.13.2
+```
+
+You can check node is installed with this command. 
+
+```bash
+node --version
+```
+
+Before we start using Node.js, what is it? Node.js is a JavaScript runtime environment that lets us execute JavaScript code outside of a web browser. 
+It will also let us use server-side scripting, which makes web development a lot easier. We will dive a little deeper into this in the upcoming units. There's a lot more to talk about, and we can't fit it all into this one unit. 
+If you want to learn more, you can find many resources online. 
+
+### Running JavaScript
+
+Once node is installed, we can run our own JavaScript code on our computer. Create a new file with the `.js` file extension. Add this to the file: 
+
+```javascript
+//hello.js
+console.log("Hello, World!")
+```
+
+Go back to your terminal, and we can run these files with a simple command. `node <name_of_file>`
+```bash
+node hello.js
+> Hello, World!
+```
 
 ## Assignment
 
-This week, we will be making a website showing off our favorite UCI classes. There will be a text input field to type in a class, and an add button, to add a new class to our list!
+This week's assignment is to complete a series of programming problems in javascript code. To submit the assignment, create a GitHub repository of your assignment, and submit the URL in the form below.
+
+#### Problem 1
+Given an array of numbers, return only numbers divisible by 3
+```
+[1, 2, 3, 4, 5, 6, 7, 8, 9] -> [3, 6, 9]
+```
+
+#### Problem 2
+Given a list of names, use  .map to create a list of strings that says "Hi {Name}".
+```
+["Chase", "Raman"] -> ["Hi Chase", "Hi Raman"]
+```
+
+#### Problem 3
+Given a list of strings, use .reduce to find the FIRST string in alphabetical order. You can use string comparison in JavaScript to compare strings.
+```
+["JavaScript", "Raman", "Chase", "ICSSC"] -> "Chase"
+```
+
+#### Problem 4
+Given a list of strings, use a FOR-LOOP to find the LAST string in alphabetical order. You can use string comparison in JavaScript to compare strings.
+```
+["JavaScript", "Raman", "Chase", "ICSSC"] -> "Raman"
+```
+
+#### Problem 5
+Given a percentage, return the letter grade for that percentage. (Don't worry about +/-).
+```
+92 -> "A", 75 -> B
+```
+
+
+#### Problem 6
+Given a string, return a modified version with the first half in UPPERCASE, and the second half in lowercase. 
+If the string has odd length, the middle character can be uppercase or lowercase.
+```
+"abcdef" -> "ABCdef"
+"abcdefg" -> "ABCdefg"
+"UNiTeD STATes OF AMerICA" -> "UNITED STATEs of america"
+```
+
+
+#### Optional Stretch Goal: Problem 7
+Given an integer y, return a string of a pyramid, with y levels. 
+```
+y = 5
+    *
+   ***
+  *****
+ *******
+*********
+```
+
+Download the [assignment template](../static/unit6.js).
 
 **Required Tasks**
-
--   
+- Create a GitHub Repository with your programming assignment in it.
+- Complete Problems 1-6 in the assignment file.
 
 **Optional Stretch Goals**
 
--   
+- Complete problem 7 
 
 ### Due Date
 
