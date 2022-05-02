@@ -89,57 +89,101 @@ Arrays are almost exactly the same as they are in Python.
 
 ```javascript
 const array = ['a', 'b', 'c', 1, 2, 3];
-console.log( array[2] ); // "c"
-console.log( array.length );// 6
-//add item to end of the array
-array.push('4');
 
-//combine elements into a string
-const str = array.join('-');
-console.log(str); //=> "a-b-c-1-2-3-4"
+console.log(array[2]); 		// "c"
+console.log(array.length);	// "6"
+array.push('4'); 			// add item to end of the array	
+console.log(array);			// "['a', 'b', 'c', 1, 2, 3, '4']"
+
+
+const str = array.join('-'); // Combine elements into a string
+console.log(str);			 // "a-b-c-1-2-3-4"
 
 //get index of an element (first occurrence)
-const oIndex = array.indexOf('x'); //=> 3
+console.log(array.indexOf('x')); // 3
+
+array.reverse();	// Reverse the array
+console.log(array);	// "['4', 3, 2, 1, 'c', 'b', 'a']"
 ```
 
-JavaScript arrays also have methods that help us create and modify arrays.
-These are the map, filter and reduce functions.
-These will iterate over an array and perform a transformation or computation.
-Then they will return a new array based on the result of the function.
+#### Sorting
+Arrays can be sorted with the `.sort()` function. 
+By default, `.sort()` will alphabetize the array.
+
+```javascript
+const numbers = [2, 3, 4, 1];
+numbers.sort(); // [1, 2, 3, 4]
+```
+
+However we can customize our sort by providing a `compareFunction`. 
+This function takes 2 elements and returns a value that determines how to order the elements.  
+
+| compareFunction(a, b) return value | sort order |
+| --- | --- |
+| > 0 | sort b before a |
+| < 0 | sort a before b |
+| === 0 | keep original order of a and b |
+
+
+```javascript
+// Sort the list of words ignoring uppercase
+const words = ["Water", "fire", "Ice", "ice cream"];
+words.sort((a, b) => {
+	// .localeCompare helps us compare two strings
+	return a.toLowerCase().localeCompare(b.toLowerCase());	
+}); // ['fire', 'Ice', 'ice cream', 'Water']
+
+// This is also helpful for sorting objects
+const players1 = [{ name: "Chase", points: 2 }, { name: "Raman", points: 3 }]
+players1.sort((a, b) => {
+	return b.points - a.points;
+}); // [{ name: 'Raman', points: 3 }, { name: 'Chase', points: 2 }]
+```
+
+#### Advanced Array Functions
+JavaScript arrays also have methods that help us create and modify arrays: `.map`, `.filter`, and `.reduce`.
+You will use these functions a lot, so **it's important to understand what each does**.
 
 #### Map
 The `map()` function creates a new array from an existing one. 
-It applies a function to each one of the elements of the first array.
+Each element in the array is passed through a function, which returns a value to be added to the new array.
 ```javascript
 const numbers = [1, 2, 3, 4];
 const doubled = numbers.map(function(item) {
 	return item * 2;
 });
-console.log(doubled); // [2, 4, 6, 8]
+console.log(doubled); // "[2, 4, 6, 8]"
 ```
 
 #### Filter
 The `filter()` function applies a conditional to each element in the array.
-If the conditional is true, the element is pushed in the output array.
+If the conditional is true, the element is included in the output array.
 ```javascript
 const numbers = [1, 2, 3, 4];
 const evens = numbers.filter(function(item) {
 	return item % 2 === 0;
 });
-console.log(evens); // [2, 4]
+console.log(evens); // "[2, 4]"
 ```
 
 #### Reduce
-The `reduce()` function rerduces the values of an array to just one value.
-It does so by accumulating a value as it iterates through the array.
+The `reduce()` function reduces the values of an array to just one value.
+It does so by accumulating a value as it iterates through the array. 
+The function takes two parameters: `reduce(callbackFn, initialValue)`.  
+- `initialValue` is the intial value of your accumulator.
+- `callbackFn` is your 'reducer' function. 
+This function takes two parameters, the accumulator and an item. 
+For each item in the array, the `callBackFn` is called on the item and returns the updated accumulator.
 ```javascript
 const numbers = [1, 2, 3, 4];
-//result is the accumulator - the returned value of the previous iteration
-//item is the current item in the array.
-const sum = numbers.reduce(function (result, item) {
-  return result + item;
-}, 0);
-console.log(sum); // 10
+
+// Callback Function parameters
+// 	result 	- the accumulator, which is the returned value of the previous iteration.
+// 	item 	- the current item in the array.
+//
+// Note: the intial value of the accumulator is set to 0.
+const sum = numbers.reduce(function (result, item) { return result + item; }, 0);
+console.log(sum); // "10"
 ```
 
 ### Loops and Conditionals
@@ -385,4 +429,8 @@ JavaScript
 
 - [https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [https://www.w3schools.com/js/default.asp](https://www.w3schools.com/js/default.asp)
+
+JavaScript Array Functions
+- [FireShip .map in 100 seconds](https://www.youtube.com/watch?v=DC471a9qrU4)
+- [FireShip .reduce in 100 seconds](https://www.youtube.com/watch?v=tVCYa_bnITg)
 
