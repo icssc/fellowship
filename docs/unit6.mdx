@@ -38,19 +38,17 @@ Variables are dynamically-typed, meaning, they don't have a type (like in Python
 Undefined variables have the value `undefined`.
 We use the keywords `var`, `let` and `const` to define variables.
 
-| Keyword | Behavior |
-| --- | --- |
-| var | Defines a variable globally. |
-| let | Defines a variable limited in scope to the block. | 
-| const | Defines a variable limited in scope to the block, but its value is constant.  |
+| Keyword | Behavior | When to Use |
+| --- | --- | --- |
+| var | Defines a variable limited in scope to the function. | Don't use var. To learn more, read ["Why don't we use var anymore?"](https://medium.com/@codingsam/awesome-javascript-no-more-var-working-title-999428999994). |
+| let | Defines a variable limited in scope to the block. | Use when you need to change the value of the variable later on. |
+| const | Defines a variable limited in scope to the block, but its value is constant. | You should always use const unless you need to change the value of the variable later on. |
 
 
 ```javascript
 let x = 'hello';
-let y = 1234;
-let z = false;
-var a = 'abc' // Defined globally. 
-const pi = '3.14'; //this variable cannot ever be changed.
+x = 1234;			// the `x` variable can be changed.
+const pi = 3.14; 	// the `pi` variable cannot be changed.
 ```
 
 
@@ -61,7 +59,7 @@ They can be enclosed in either single quotes `' '` or double quotes `" "`.
 There are a lot of powerful [built-in string functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt) for you to use.
 Here are a few popular examples:
 ```javascript
-let clubName = 'icssc';
+const clubName = 'icssc';
 console.log(className); 				// icssc
 console.log(className.length); 			// 5
 console.log(className.toUpperCase());	// ICSSC
@@ -90,18 +88,18 @@ console.log(`I wish I had ${likes * 10} likes!`)	// "I wish I had 50 likes!"
 Arrays are almost exactly the same as they are in Python.
 
 ```javascript
-var array = ['a', 'b', 'c', 1, 2, 3];
+const array = ['a', 'b', 'c', 1, 2, 3];
 console.log( array[2] ); // "c"
 console.log( array.length );// 6
 //add item to end of the array
 array.push('4');
 
 //combine elements into a string
-var str = array.join('-');
+const str = array.join('-');
 console.log(str); //=> "a-b-c-1-2-3-4"
 
 //get index of an element (first occurrence)
-var oIndex = array.indexOf('x'); //=> 3
+const oIndex = array.indexOf('x'); //=> 3
 ```
 
 JavaScript arrays also have methods that help us create and modify arrays.
@@ -124,7 +122,7 @@ console.log(doubled); // [2, 4, 6, 8]
 The `filter()` function applies a conditional to each element in the array.
 If the conditional is true, the element is pushed in the output array.
 ```javascript
-onst numbers = [1, 2, 3, 4];
+const numbers = [1, 2, 3, 4];
 const evens = numbers.filter(function(item) {
 	return item % 2 === 0;
 });
@@ -189,8 +187,8 @@ Similar to Python Dictionaries, these are an unordered set of key-value pairs.
 Unlike python, you don't need quotes around the keys. 
 
 ```javascript
-ages = {alice:40, bob:35, charles:13}
-things = {num:12, dog:'woof', list:[1,2,3]}
+const ages = {alice:40, bob:35, charles:13}
+const things = {num:12, dog:'woof', list:[1,2,3]}
 
 //both of these work!
 console.log(ages["alice"]); // 40
@@ -213,14 +211,14 @@ console.log(sayHello()); // Hello, undefined undefined
 #### Arrow Functions
 Arrow functions are a newer feature of JavaScript, and let us write functions with much shorter syntax. 
 ```javascript
-let otherSayHello = (firstName, lastName) => {
+const otherSayHello = (firstName, lastName) => {
 	return "Hello, " + firstName + " " + lastName;
 };
 ```
 Arrow functions return a value by default, so if it only requires one statement to write the function, we can cut it even shorter. 
 
 ```javascript
-let otherSayHello = (firstName, lastName) => "Hello, " + firstName + " " + lastName;
+const otherSayHello = (firstName, lastName) => "Hello, " + firstName + " " + lastName;
 ```
 
 
@@ -230,8 +228,8 @@ Functions are objects, and can be passed as arguments to other function calls.
 
 ```javascript
 //Iterate through an array
-var array = ['a','b','c'];
-var printItem = function(item) {
+let array = ['a','b','c'];
+let printItem = function(item) {
  console.log(item);
 }
 array.forEach(printItem);
