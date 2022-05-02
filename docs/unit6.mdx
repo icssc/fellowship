@@ -9,8 +9,8 @@ import Video from '@site/src/components/Video';
 
 ## Welcome to Unit 6
 
-JavaScript is the world's most popular programming language, also considered the programming language of the web. Many web developers use 
-JavaScript to create websites and add behavior to them.
+JavaScript is the world's most popular programming language, also considered the programming language of the web.
+Many web developers use JavaScript to create websites and add behavior to them.
 
 ## Unit 6 Lecture Video
 <!-- TODO
@@ -21,7 +21,8 @@ JavaScript to create websites and add behavior to them.
 
 ## JavaScript
 
-JavaScript is a high-level language and is very similar to many languages you might have used before (Python, Java). Here's a quick overview of the basics.
+JavaScript is a high-level language and is very similar to many languages you might have used before (Python, Java).
+Here's a quick overview of the basics.
 
 ### Printing
 
@@ -33,7 +34,9 @@ console.log("Hello, World!");
 
 ### Variables
 
-Variables are dynamically-typed, meaning, they don't have a type (like in Python). Undefined variables have the value `undefined`. We use the keywords `var`, `let` and `const` to define variables.
+Variables are dynamically-typed, meaning, they don't have a type (like in Python).
+Undefined variables have the value `undefined`.
+We use the keywords `var`, `let` and `const` to define variables.
 
 | Keyword | Behavior |
 | --- | --- |
@@ -84,11 +87,14 @@ console.log(str); //=> "a-b-c-1-2-3-4"
 var oIndex = array.indexOf('x'); //=> 3
 ```
 
-JavaScript arrays also have methods that help us create and modify arrays. These are the map, filter and reduce functions. These will 
-iterate over an array and perform a transformation or computation. Then they will return a new array based on the result of the function
+JavaScript arrays also have methods that help us create and modify arrays.
+These are the map, filter and reduce functions.
+These will iterate over an array and perform a transformation or computation.
+Then they will return a new array based on the result of the function.
 
 #### Map
-The `map()` function creates a new array from an existing one. It applies a function to each one of the elements of the first array.
+The `map()` function creates a new array from an existing one. 
+It applies a function to each one of the elements of the first array.
 ```javascript
 const numbers = [1, 2, 3, 4];
 const doubled = numbers.map(function(item) {
@@ -98,7 +104,8 @@ console.log(doubled); // [2, 4, 6, 8]
 ```
 
 #### Filter
-The `filter()` function applies a conditional to each element in the array. If the conditional is true, the element is pushed in the output array.
+The `filter()` function applies a conditional to each element in the array.
+If the conditional is true, the element is pushed in the output array.
 ```javascript
 onst numbers = [1, 2, 3, 4];
 const evens = numbers.filter(function(item) {
@@ -108,7 +115,8 @@ console.log(evens); // [2, 4]
 ```
 
 #### Reduce
-The `reduce()` function rerduces the values of an array to just one value. It does so by accumulating a value as it iterates through the array.
+The `reduce()` function rerduces the values of an array to just one value.
+It does so by accumulating a value as it iterates through the array.
 ```javascript
 const numbers = [1, 2, 3, 4];
 //result is the accumulator - the returned value of the previous iteration
@@ -139,7 +147,8 @@ while (true) {
 }
 ```
 
-We can also use for-each loops in javascript, but only for arrays. This is similar to the map, filter and reduce function mentioned in the previous section. 
+We can also use for-each loops in javascript, but only for arrays. 
+This is similar to the map, filter and reduce function mentioned in the previous section. 
 This uses a callback function, more on this [later](#callback-functions).
 ```javascript
 const array = ["one", "two", "three"]
@@ -148,7 +157,8 @@ array.forEach(function (item, index) { // notice how a function is passed into f
 });
 ```
 
-In fact, JavaScript also has something cool called a for-of loop. This lets us loop through iterables like strings and arrays.
+In fact, JavaScript also has something cool called a for-of loop. 
+This lets us loop through iterables like strings and arrays.
 ```javascript
 const str = "fellowship"
 for (const element of str) {
@@ -158,7 +168,8 @@ for (const element of str) {
 
 ### Objects
 
-Similar to Python Dictionaries, these are an unordered set of key-value pairs. Unlike python, you don't need quotes around the keys. 
+Similar to Python Dictionaries, these are an unordered set of key-value pairs. 
+Unlike python, you don't need quotes around the keys. 
 
 ```javascript
 ages = {alice:40, bob:35, charles:13}
@@ -170,7 +181,8 @@ console.log(ages.bob); // 35
 ```
 
 ### Functions
-Define the `sayHello` function that takes in two parameters, `firstName`, and `lastName`.  In JavaScript, parameters are optional. 
+Define the `sayHello` function that takes in two parameters, `firstName`, and `lastName`.  
+In JavaScript, parameters are optional. 
 
 ```javascript
 function sayHello(firstName, lastName) {
@@ -207,19 +219,23 @@ var printItem = function(item) {
 }
 array.forEach(printItem);
 ```
-We can use anonymous functions to reduce how much code we write even more. This way we don't have to give each function a name.
+We can use anonymous functions to reduce how much code we write even more. 
+This way we don't have to give each function a name.
 ```javascript
 array.forEach(function(item) {
  console.log(item);
 });
 ```
 
-If JavaScript is new to you, or you are curious, it might be helpful to check out the official documentation. It has tutorials, examples, and a reference to JavaScript syntax/features. There's so much more that we haven't covered on how JavaScript works. 
+If JavaScript is new to you, or you are curious, it might be helpful to check out the official documentation. 
+It has tutorials, examples, and a reference to JavaScript syntax/features. 
+There's so much more that we haven't covered on how JavaScript works. 
 
 [JavaScript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ## Setting up JavaScript and Node.js
-We will be using `nvm` to install Node. Nvm makes it easier to jump between versions of node, which you will need for some projects. 
+We will be using `nvm` to install Node.
+Nvm makes it easier to jump between versions of node, which you will need for some projects. 
 
 ### Node.js
 
@@ -244,13 +260,18 @@ You can check node is installed with this command.
 node --version
 ```
 
-Before we start using Node.js, what is it? Node.js is a JavaScript runtime environment that lets us execute JavaScript code outside of a web browser. 
-It will also let us use server-side scripting, which makes web development a lot easier. We will dive a little deeper into this in the upcoming units. There's a lot more to talk about, and we can't fit it all into this one unit. 
+Before we start using Node.js, what is it? 
+Node.js is a JavaScript runtime environment that lets us execute JavaScript code outside of a web browser. 
+It will also let us use server-side scripting, which makes web development a lot easier.
+We will dive a little deeper into this in the upcoming units.
+There's a lot more to talk about, and we can't fit it all into this one unit. 
 If you want to learn more, you can find many resources online. 
 
 ### Running JavaScript
 
-Once node is installed, we can run our own JavaScript code on our computer. Create a new file with the `.js` file extension. Add this to the file: 
+Once node is installed, we can run our own JavaScript code on our computer. 
+Create a new file with the `.js` file extension. 
+Add this to the file: 
 
 ```javascript
 //hello.js
@@ -265,7 +286,8 @@ node hello.js
 
 ## Assignment
 
-This week's assignment is to complete a series of programming problems in javascript code. To submit the assignment, create a GitHub repository of your assignment, and submit the URL in the form below.
+This week's assignment is to complete a series of programming problems in javascript code. 
+To submit the assignment, create a GitHub repository of your assignment, and submit the URL in the form below.
 
 #### Problem 1
 Given an array of numbers, return only numbers divisible by 3
@@ -280,13 +302,15 @@ Given a list of names, use  .map to create a list of strings that says "Hi {Name
 ```
 
 #### Problem 3
-Given a list of strings, use .reduce to find the FIRST string in alphabetical order. You can use string comparison in JavaScript to compare strings.
+Given a list of strings, use .reduce to find the FIRST string in alphabetical order. 
+You can use string comparison in JavaScript to compare strings.
 ```
 ["JavaScript", "Raman", "Chase", "ICSSC"] -> "Chase"
 ```
 
 #### Problem 4
-Given a list of strings, use a FOR-LOOP to find the LAST string in alphabetical order. You can use string comparison in JavaScript to compare strings.
+Given a list of strings, use a FOR-LOOP to find the LAST string in alphabetical order. 
+You can use string comparison in JavaScript to compare strings.
 ```
 ["JavaScript", "Raman", "Chase", "ICSSC"] -> "Raman"
 ```
