@@ -186,9 +186,9 @@ const sum = numbers.reduce(function (result, item) { return result + item; }, 0)
 console.log(sum); // "10"
 ```
 
-### Loops and Conditionals
-
-JavaScript uses curly brackets `{}`, to denote code blocks for ifs, and loops. 
+### Conditionals
+#### If Statements
+For if statements, JavaScript uses parentheses `()` to denote the conditions and curly brackets `{}` to denote code blocks.
 
 ```javascript
 if (i > 5) {
@@ -198,6 +198,65 @@ if (i > 5) {
 } else {
 	console.log('i is less than 3');
 }
+```
+
+#### Ternary Operator
+A ternary operator can be used to replace (and simply) an if..else statement in certain situations.
+Ternary operators are extremely common in React.
+
+This is the format of the ternary operator: `condition ? trueValue : falseValue`.  
+If the condition is true, the `trueValue` will be returned. 
+If it is false, the `falseValue` will be returned.
+
+```javascript
+// Consider the following if statement
+let price;
+if (isMember) {
+	price = "$2.00";
+} else {
+	price = "$10.00";
+}
+
+// This can be drastically condensed with a ternary operator
+price = isMember ? '$2.00' : '$10.00';
+
+// We can also use ternary operators with return statements
+function evenOrOdd(number) {
+	return number % 2 == 0 ? "Even" : "Odd";
+}
+```
+
+
+#### Switch Statements
+Switch statements can helpful for simple branching decisions.
+Given a value, it will execute the code under the equivalent case.
+Trying to write this as a series of if-else statements would get large.
+
+```javascript
+switch (name) {
+	case 'Aaron':
+		console.log('PeterPortal Tech Lead');
+		break;
+	case 'Alexander':
+		console.log('Zotistics Tech Lead');
+		break;
+	case 'Chase':
+	case 'Raman':
+		// We can fall-through if two values should be the same
+		// Here, 'Chase' and 'Raman' should print the same thing
+		console.log('Projects Co-Chair');
+		break;
+	case default:
+		console.log("That name isn't in Projects Committee");
+		break;
+}
+```
+
+### Loops
+
+JavaScript uses curly brackets `{}` to denote code blocks loops. 
+
+```javascript
 for (let x = 0; x < 5; x++) {
 	console.log(x);
 }
