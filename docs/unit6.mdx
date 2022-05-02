@@ -55,17 +55,34 @@ const pi = '3.14'; //this variable cannot ever be changed.
 
 
 ### Strings
+Strings are a collection of characters.
+They can be enclosed in either single quotes `' '` or double quotes `" "`.
 
+There are a lot of powerful [built-in string functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt) for you to use.
+Here are a few popular examples:
 ```javascript
 let clubName = 'icssc';
-console.log(className); //icssc
-console.log(className.length) // 5
-className = className.toUpperCase();
-console.log(className); //ICSSC
-console.log(classname + " Projects");
-let part = className.substring(1, 4);
-console.log(part); //CSS
-console.log(className.indexOf('SSC') >= 0); //whether substring appears
+console.log(className); 				// icssc
+console.log(className.length); 			// 5
+console.log(className.toUpperCase());	// ICSSC
+console.log(className.indexOf('ss')); 	// 2
+console.log(className.includes('cs'));	// true
+console.log(className.startsWith('i'));	// true
+console.log(className.endsWith('sc'));	// true
+```
+
+You can also perform string interpolation using backticks `` ` ` ``.
+String interpolation is when you inject an expression into a string.
+In JavaScript, this is called "template literals".
+You can put any expression into the string using a dollar sign and curly brace: `${expression}`.
+
+```javascript
+let likes = 5;
+console.log('This post has ' + likes + ' likes');	// "This post has 5 likes"
+console.log(`This post has ${likes} likes`);		// "This post has 5 likes" <- same but cleaner
+
+// You can also compute expressions inside the string
+console.log(`I wish I had ${likes * 10} likes!`)	// "I wish I had 50 likes!"
 ```
 
 ### Arrays
