@@ -325,7 +325,7 @@ const otherSayHello = (firstName, lastName) => "Hello, " + firstName + " " + las
 ```
 
 
-### Callback Functions
+#### Callback Functions
 
 Functions are objects, and can be passed as arguments to other function calls. 
 
@@ -337,6 +337,8 @@ let printItem = function(item) {
 }
 array.forEach(printItem);
 ```
+
+#### Anonymous Functions
 We can use anonymous functions to reduce how much code we write even more. 
 This way we don't have to give each function a name.
 ```javascript
@@ -345,6 +347,7 @@ array.forEach(function(item) {
 });
 ```
 
+### Documentation
 If JavaScript is new to you, or you are curious, it might be helpful to check out the official documentation. 
 It has tutorials, examples, and a reference to JavaScript syntax/features. 
 There's so much more that we haven't covered on how JavaScript works. 
@@ -404,72 +407,11 @@ node hello.js
 
 ## Assignment
 
-This week's assignment is to complete a series of programming problems in javascript code. 
-To submit the assignment, create a GitHub repository of your assignment, and submit the URL in the form below.
-
-#### Problem 1
-Given an array of numbers, return only numbers divisible by 3
-```
-[1, 2, 3, 4, 5, 6, 7, 8, 9] -> [3, 6, 9]
-```
-
-#### Problem 2
-Given a list of names, use  .map to create a list of strings that says "Hi {Name}".
-```
-["Chase", "Raman"] -> ["Hi Chase", "Hi Raman"]
-```
-
-#### Problem 3
-Given a list of strings, use .reduce to find the FIRST string in alphabetical order. 
-You can use string comparison in JavaScript to compare strings.
-```
-["JavaScript", "Raman", "Chase", "ICSSC"] -> "Chase"
-```
-
-#### Problem 4
-Given a list of strings, use a FOR-LOOP to find the LAST string in alphabetical order. 
-You can use string comparison in JavaScript to compare strings.
-```
-["JavaScript", "Raman", "Chase", "ICSSC"] -> "Raman"
-```
-
-#### Problem 5
-Given a percentage, return the letter grade for that percentage. (Don't worry about +/-).
-```
-92 -> "A", 75 -> B
-```
-
-
-#### Problem 6
-Given a string, return a modified version with the first half in UPPERCASE, and the second half in lowercase. 
-If the string has odd length, the middle character can be uppercase or lowercase.
-```
-"abcdef" -> "ABCdef"
-"abcdefg" -> "ABCdefg"
-"UNiTeD STATes OF AMerICA" -> "UNITED STATEs of america"
-```
-
-
-#### Optional Stretch Goal: Problem 7
-Given an integer y, return a string of a pyramid, with y levels. 
-```
-y = 5
-    *
-   ***
-  *****
- *******
-*********
-```
-
-Download the [assignment template](../static/unit6.js).
+This week's assignment is to complete a series of programming problems use Javascript.
 
 **Required Tasks**
-- Create a GitHub Repository with your programming assignment in it.
-- Complete Problems 1-6 in the assignment file.
-
-**Optional Stretch Goals**
-
-- Complete problem 7 
+- Fork the [javascript-practice](https://github.com/icssc/javascript-practice) GitHub Repository.
+- Solve each challenge in the /problems folder and push your code to GitHub.
 
 ### Due Date
 
