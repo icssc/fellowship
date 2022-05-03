@@ -1,0 +1,436 @@
+---
+sidebar_position: 6
+sidebar_label: "Unit 6: JavaScript"
+---
+
+import Video from '@site/src/components/Video';
+
+# Unit 6: Scripting with JavaScript
+
+## Welcome to Unit 6
+
+JavaScript is the world's most popular programming language, also considered the programming language of the web.
+Many web developers use JavaScript to create websites and add behavior to them.
+
+## Unit 6 Lecture Video
+
+<Video src="https://www.youtube.com/embed/Y1sL0tizxDU" />
+
+<Video src="https://www.youtube.com/embed/DHjqpvDnNGE" />
+    
+
+## JavaScript
+
+JavaScript is a high-level language and is very similar to many languages you might have used before (Python, Java).
+Here's a quick overview of the basics.
+
+### Printing
+
+```javascript
+console.log("Hello, World!"); 
+// In Web Development, this will actually show up in the developer console. 
+// Open the console in Chrome with cmd+alt+j (mac) or ctrl+shift+j (windows)
+```
+
+### Variables
+
+Variables are dynamically-typed, meaning, they don't have a type (like in Python).
+Undefined variables have the value `undefined`.
+We use the keywords `var`, `let` and `const` to define variables.
+
+| Keyword | Behavior | When to Use |
+| --- | --- | --- |
+| var | Defines a variable limited in scope to the function. | Don't use var. To learn more, read ["Why don't we use var anymore?"](https://medium.com/@codingsam/awesome-javascript-no-more-var-working-title-999428999994). |
+| let | Defines a variable limited in scope to the block. | Use when you need to change the value of the variable later on. |
+| const | Defines a variable limited in scope to the block, but its value is constant. | You should always use const unless you need to change the value of the variable later on. |
+
+
+```javascript
+let x = 'hello';
+x = 1234;			// the `x` variable can be changed.
+const pi = 3.14; 	// the `pi` variable cannot be changed.
+```
+
+
+### Strings
+Strings are a collection of characters.
+They can be enclosed in either single quotes `' '` or double quotes `" "`.
+
+There are a lot of powerful [built-in string functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt) for you to use.
+Here are a few popular examples:
+```javascript
+const clubName = 'icssc';
+console.log(className); 				// icssc
+console.log(className.length); 			// 5
+console.log(className.toUpperCase());	// ICSSC
+console.log(className.indexOf('ss')); 	// 2
+console.log(className.includes('cs'));	// true
+console.log(className.startsWith('i'));	// true
+console.log(className.endsWith('sc'));	// true
+```
+
+You can also perform string interpolation using backticks `` ` ` ``.
+String interpolation is when you inject an expression into a string.
+In JavaScript, this is called "template literals".
+You can put any expression into the string using a dollar sign and curly brace: `${expression}`.
+
+```javascript
+let likes = 5;
+console.log('This post has ' + likes + ' likes');	// "This post has 5 likes"
+console.log(`This post has ${likes} likes`);		// "This post has 5 likes" <- same but cleaner
+
+// You can also compute expressions inside the string
+console.log(`I wish I had ${likes * 10} likes!`)	// "I wish I had 50 likes!"
+```
+
+### Arrays
+
+Arrays are almost exactly the same as they are in Python.
+
+```javascript
+const array = ['a', 'b', 'c', 1, 2, 3];
+
+console.log(array[2]); 		// "c"
+console.log(array.length);	// "6"
+array.push('4'); 			// add item to end of the array	
+console.log(array);			// "['a', 'b', 'c', 1, 2, 3, '4']"
+
+
+const str = array.join('-'); // Combine elements into a string
+console.log(str);			 // "a-b-c-1-2-3-4"
+
+//get index of an element (first occurrence)
+console.log(array.indexOf('x')); // 3
+
+array.reverse();	// Reverse the array
+console.log(array);	// "['4', 3, 2, 1, 'c', 'b', 'a']"
+```
+
+#### Sorting
+Arrays can be sorted with the `.sort()` function. 
+By default, `.sort()` will alphabetize the array.
+
+```javascript
+const numbers = [2, 3, 4, 1];
+numbers.sort(); // [1, 2, 3, 4]
+```
+
+However we can customize our sort by providing a `compareFunction`. 
+This function takes 2 elements and returns a value that determines how to order the elements.  
+
+| compareFunction(a, b) return value | sort order |
+| --- | --- |
+| > 0 | sort b before a |
+| < 0 | sort a before b |
+| === 0 | keep original order of a and b |
+
+
+```javascript
+// Sort the list of words ignoring uppercase
+const words = ["Water", "fire", "Ice", "ice cream"];
+words.sort((a, b) => {
+	// .localeCompare helps us compare two strings
+	return a.toLowerCase().localeCompare(b.toLowerCase());	
+}); // ['fire', 'Ice', 'ice cream', 'Water']
+
+// This is also helpful for sorting objects
+const players1 = [{ name: "Chase", points: 2 }, { name: "Raman", points: 3 }]
+players1.sort((a, b) => {
+	return b.points - a.points;
+}); // [{ name: 'Raman', points: 3 }, { name: 'Chase', points: 2 }]
+```
+
+#### Advanced Array Functions
+JavaScript arrays also have methods that help us create and modify arrays: `.map`, `.filter`, and `.reduce`.
+You will use these functions a lot, so **it's important to understand what each does**.
+
+#### Map
+The `map()` function creates a new array from an existing one. 
+Each element in the array is passed through a function, which returns a value to be added to the new array.
+```javascript
+const numbers = [1, 2, 3, 4];
+const doubled = numbers.map(function(item) {
+	return item * 2;
+});
+console.log(doubled); // "[2, 4, 6, 8]"
+```
+
+#### Filter
+The `filter()` function applies a conditional to each element in the array.
+If the conditional is true, the element is included in the output array.
+```javascript
+const numbers = [1, 2, 3, 4];
+const evens = numbers.filter(function(item) {
+	return item % 2 === 0;
+});
+console.log(evens); // "[2, 4]"
+```
+
+#### Reduce
+The `reduce()` function reduces the values of an array to just one value.
+It does so by accumulating a value as it iterates through the array. 
+The function takes two parameters: `reduce(callbackFn, initialValue)`.  
+- `initialValue` is the intial value of your accumulator.
+- `callbackFn` is your 'reducer' function. 
+This function takes two parameters, the accumulator and an item. 
+For each item in the array, the `callBackFn` is called on the item and returns the updated accumulator.
+```javascript
+const numbers = [1, 2, 3, 4];
+
+// Callback Function parameters
+// 	result 	- the accumulator, which is the returned value of the previous iteration.
+// 	item 	- the current item in the array.
+//
+// Note: the intial value of the accumulator is set to 0.
+const sum = numbers.reduce(function (result, item) { return result + item; }, 0);
+console.log(sum); // "10"
+```
+
+### Conditionals
+#### If Statements
+For if statements, JavaScript uses parentheses `()` to denote the conditions and curly brackets `{}` to denote code blocks.
+
+```javascript
+if (i > 5) {
+	console.log('i is bigger than 5');
+} else if (i >= 3) {
+	console.log('i is between 3 and 5');
+} else {
+	console.log('i is less than 3');
+}
+```
+
+#### Ternary Operator
+A ternary operator can be used to replace (and simply) an if..else statement in certain situations.
+Ternary operators are extremely common in React.
+
+This is the format of the ternary operator: `condition ? trueValue : falseValue`.  
+If the condition is true, the `trueValue` will be returned. 
+If it is false, the `falseValue` will be returned.
+
+```javascript
+// Consider the following if statement
+let price;
+if (isMember) {
+	price = "$2.00";
+} else {
+	price = "$10.00";
+}
+
+// This can be drastically condensed with a ternary operator
+price = isMember ? '$2.00' : '$10.00';
+
+// We can also use ternary operators with return statements
+function evenOrOdd(number) {
+	return number % 2 == 0 ? "Even" : "Odd";
+}
+```
+
+
+#### Switch Statements
+Switch statements can helpful for simple branching decisions.
+Given a value, it will execute the code under the equivalent case.
+Trying to write this as a series of if-else statements would get large.
+
+```javascript
+switch (name) {
+	case 'Aaron':
+		console.log('PeterPortal Tech Lead');
+		break;
+	case 'Alexander':
+		console.log('Zotistics Tech Lead');
+		break;
+	case 'Chase':
+	case 'Raman':
+		// We can fall-through if two values should be the same
+		// Here, 'Chase' and 'Raman' should print the same thing
+		console.log('Projects Co-Chair');
+		break;
+	default:
+		console.log("That name isn't in Projects Committee");
+		break;
+}
+```
+
+### Loops
+
+JavaScript uses curly brackets `{}` to denote code blocks loops. 
+
+```javascript
+for (let x = 0; x < 5; x++) {
+	console.log(x);
+}
+while (true) {
+	console.log("repeat");
+}
+```
+
+We can also use for-each loops in javascript, but only for arrays. 
+This is similar to the map, filter and reduce function mentioned in the previous section. 
+This uses a callback function, more on this [later](#callback-functions).
+```javascript
+const array = ["one", "two", "three"]
+array.forEach(function (item, index) { // notice how a function is passed into forEach function call.
+  console.log(item, index);
+});
+```
+
+In fact, JavaScript also has something cool called a for-of loop. 
+This lets us loop through iterables like strings and arrays.
+```javascript
+const str = "fellowship"
+for (const element of str) {
+  console.log(element);
+}
+```
+
+### Objects
+
+Similar to Python Dictionaries, these are an unordered set of key-value pairs. 
+Unlike python, you don't need quotes around the keys. 
+
+```javascript
+const ages = {alice:40, bob:35, charles:13}
+const things = {num:12, dog:'woof', list:[1,2,3]}
+
+//both of these work!
+console.log(ages["alice"]); // 40
+console.log(ages.bob); // 35
+```
+
+### Functions
+Define the `sayHello` function that takes in two parameters, `firstName`, and `lastName`.  
+In JavaScript, parameters are optional. 
+
+```javascript
+function sayHello(firstName, lastName) {
+	return "Hello, " + firstName + " " + lastName;
+}
+
+console.log(sayHello("Raman", "Gupta")); // Hello, Raman Gupta
+console.log(sayHello()); // Hello, undefined undefined
+```
+
+#### Arrow Functions
+Arrow functions are a newer feature of JavaScript, and let us write functions with much shorter syntax. 
+```javascript
+const otherSayHello = (firstName, lastName) => {
+	return "Hello, " + firstName + " " + lastName;
+};
+```
+Arrow functions return a value by default, so if it only requires one statement to write the function, we can cut it even shorter. 
+
+```javascript
+const otherSayHello = (firstName, lastName) => "Hello, " + firstName + " " + lastName;
+```
+
+
+#### Callback Functions
+
+Functions are objects, and can be passed as arguments to other function calls. 
+
+```javascript
+//Iterate through an array
+let array = ['a','b','c'];
+let printItem = function(item) {
+ console.log(item);
+}
+array.forEach(printItem);
+```
+
+#### Anonymous Functions
+We can use anonymous functions to reduce how much code we write even more. 
+This way we don't have to give each function a name.
+```javascript
+array.forEach(function(item) {
+ console.log(item);
+});
+```
+
+### Documentation
+If JavaScript is new to you, or you are curious, it might be helpful to check out the official documentation. 
+It has tutorials, examples, and a reference to JavaScript syntax/features. 
+There's so much more that we haven't covered on how JavaScript works. 
+
+[JavaScript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+## Setting up JavaScript and Node.js
+We will be using `nvm` to install Node.
+Nvm makes it easier to jump between versions of node, which you will need for some projects. 
+
+### Node.js
+
+Open up your terminal and run this command. 
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+```
+
+Close and re-open your terminal, and nvm will be installed. 
+
+We will be using version 16.13.2 of node so run these commands. 
+
+```bash
+nvm install node
+nvm install v16.13.2
+```
+
+You can check node is installed with this command. 
+
+```bash
+node --version
+```
+
+Before we start using Node.js, what is it? 
+Node.js is a JavaScript runtime environment that lets us execute JavaScript code outside of a web browser. 
+It will also let us use server-side scripting, which makes web development a lot easier.
+We will dive a little deeper into this in the upcoming units.
+There's a lot more to talk about, and we can't fit it all into this one unit. 
+If you want to learn more, you can find many resources online. 
+
+### Running JavaScript
+
+Once node is installed, we can run our own JavaScript code on our computer. 
+Create a new file with the `.js` file extension. 
+Add this to the file: 
+
+```javascript
+//hello.js
+console.log("Hello, World!")
+```
+
+Go back to your terminal, and we can run these files with a simple command. `node <name_of_file>`
+```bash
+node hello.js
+> Hello, World!
+```
+
+## Assignment
+
+This week's assignment is to complete a series of programming problems use Javascript.
+
+**Required Tasks**
+- Fork the [javascript-practice](https://github.com/icssc/javascript-practice) GitHub Repository.
+- Solve each challenge in the /problems folder and push your code to GitHub.
+
+### Due Date
+
+Monday, May 9th at 11:59pm
+
+### Submission
+
+Complete the [Google Form](https://forms.gle/qQyrAuwojkVmWjEG8)
+
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe1bJzI7j6V1at3LZLs7c-NzsrzbIHYpel4k3B58vc9tMviaQ/viewform?embedded=true" width="100%" height="1116" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+## External Resources
+
+JavaScript
+
+- [https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [https://www.w3schools.com/js/default.asp](https://www.w3schools.com/js/default.asp)
+
+JavaScript Array Functions
+- [FireShip .map in 100 seconds](https://www.youtube.com/watch?v=DC471a9qrU4)
+- [FireShip .reduce in 100 seconds](https://www.youtube.com/watch?v=tVCYa_bnITg)
+
