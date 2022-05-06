@@ -217,12 +217,12 @@ function Example() {
 ```
 
 There's a lot going on here, so let's break it up:
-
-1. `useState` is a Hook, that we call inside a function Component to give it a local state. A state lets us preserve these values after the function call ends. 
+1. We import the React, and `useState` function.
+2. `useState` is a Hook, that we call inside a function Component to give it a local state. A state lets us preserve these values after the function call ends. 
     1. We pass in an argument to initialize the state, which is `0`. 
     2. `useState` returns a pair: the current state value `count`, and a function that lets you update the state to a new value `setCount`
-        1. We use syntax called “array destructuring”. Also in python, this lets us set variables to individual items in an array.
-2. For the function component we return the markup for the component. Notice the use of curly brackets around our JavaScript.
+        1. We use syntax called “array destructuring”. Also in python, this lets us set variables to individual items in an array. More on this below.
+3. For the function component we return the markup for the component. Notice the use of curly brackets around our JavaScript.
     1. In `<h2>`, we refer to our state variable to display the current count: `count`
     2. In `<button>`, we attach the function call `() => setCount(count + 1)}` so when the button is clicked, the `setCount` is called, updating our State, and re-rendering our component. 
     3. There is some wonky syntax we are using. We are defining an arrow `=>` function that takes in no parameters, and in the function body we call `setCount(count + 1)}`.
@@ -238,6 +238,51 @@ const [age, setAge] = useState(42);
 const [fruit, setFruit] = useState('banana');
 const [todos, setTodos] = useState([{ text: 'Learn Hooks' }]);
 ```
+
+#### Destructuring
+Destructuring lets us easily extract data from an array. We're setting an array to be equal to the return value of `useState`.
+This is something called Array Destructuring, a cool feature of JavaScript. 
+
+```javascript
+let [greeting, pronoun] = ["Hello", "I" , "love", "AntAlmanac"];
+
+console.log(greeting);//"Hello"
+console.log(pronoun);//"I"
+```
+
+In our example in React, `useState` returns an array of 2 values. The first being the value of the state variable. The second is a function to set the state variable. 
+Array destructuring lets us immediately assign a value to these values that are returned to us. We store them in `age`, and `setAge`. 
+```jsx
+const [age, setAge] = useState(42);
+```
+
+We can also do Object Destructuring. This is similar to arrays, but we are instead extracting data from JavaScript objects. 
+
+```javascript
+let {name, organization, role} = {name: "Raman", organization: "ICSSC", role: "Projects Co-Chair"};
+
+console.log(name);//"Raman"
+console.log(organization);//"ICSSC"
+console.log(role);//Projects Co-Chair"
+```
+
+Note the names on the left hand side should have the same name as the property key in the object. 
+If we want to assign a new variable name, we can. We also don't need to extract the entire object.
+```javascript
+let {name, organization: club} = {name: "Raman", organization: "ICSSC", role: "Projects Co-Chair"};
+
+console.log(name);//"Raman"
+console.log(club);//"ICSSC"
+```
+
+This is also often used in function arguments.
+```javascript
+function person({name, job}) {
+    console.log(name, job);
+}
+```
+
+Back to React.
 
 ### Effect Hook
 
@@ -412,7 +457,7 @@ This week, we will be making a website showing off our favorite UCI classes. The
 
 ### Due Date
 
-Monday, May 9th at 11:59pm
+Monday, May 16th at 11:59pm
 
 ### Submission
 
