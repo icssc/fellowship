@@ -1,0 +1,336 @@
+---
+sidebar_position: 8
+---
+
+import Video from '@site/src/components/Video';
+
+# Unit 8: APIs
+
+## Welcome to Unit 8
+
+Building off of last unit, we are going to make requests to APIs in our web app.
+This will let us spice up our project, and include more from the web.
+
+## Unit 8 Lecture Video
+
+<Video src="https://www.youtube.com/embed/wHWBw-lHdLM" />
+
+Only the 100 seconds, we won't be talking about how to build an API (around 2:30)
+<Video src="https://www.youtube.com/embed/-MTSQjw5DrM" />
+
+<Video src="https://www.youtube.com/embed/eIQh02xuVw4" />
+
+## What is an API?
+
+API stands for (**A**)pplication (**P**)rogramming (**I**)nterface. 
+It provides a structured way to communicate with an application by sending and receiving data.
+
+When we go to a website (i.e. facebook.com). 
+We are making a request to Facebook's servers and are asking them to respond with some data. 
+When you do this, your browser is interacting with Facebook's API to display some data. 
+
+APIs are also used for programs to interact with each other. 
+We will be using APIs in our own website so that we can retrieve some data from the internet.
+
+## REST API
+
+REST stands for Representational State Transfer, and is an architectural style for creating web services. 
+REST treats each any data as a resource, that the client can fetch/edit/delete. 
+We specify these resources through URLs and then sending a **request**. 
+The server will then provide a **response**. 
+
+### HTTP Methods
+
+With REST APIs we send HTTP Requests.
+Each of these requests has a method type, that usually correspond to what we want our request to do. 
+
+- **GET** - Getting a resource.
+- **POST** - Creating and saving a new resource.
+- **PUT** - Updating a resource.
+- **DELETE**  - Deleting a resource.
+
+Once we make a request, the server will give a response. 
+Most times the response will be in **JSON** (JavaScript Object Notation). 
+This is the primary data format passed between APIs. 
+
+### An Example
+
+Let's do an example with the [PeterPortal API](https://api.peterportal.org/).
+This API was created by ICSSC and is in use by applications like AntAlmanac and Zotistics.
+It provides data such as courses, instructors, grades, etc.
+
+To make a request, we can use [cURL](https://curl.se/) in our shell. 
+cURL lets us make an HTTP request in our shell. 
+By default cURL is making a GET request. 
+
+```bash
+cURL https://api.peterportal.org/rest/v0/courses/COMPSCI161
+```
+
+The output will look a little weird but after it's made pretty, it will look like this: 
+
+```json
+{
+    "id": "COMPSCI161",
+    "department": "COMPSCI",
+    "number": "161",
+    "school": "Donald Bren School of Information and Computer Sciences",
+    "title": "Design and Analysis of Algorithms",
+    "course_level": "Upper Division (100-199)",
+    "department_alias": [
+        "CS"
+    ],
+    "units": [
+        4,
+        4
+    ],
+    "description": "Techniques for efficient algorithm design, including divide-and-conquer and dynamic programming, and time/space analysis. Fast algorithms for problems applicable to networks, computer games, and scientific computing, such as sorting, shortest paths, minimum spanning trees, network flow, and pattern matching.",
+    "department_name": "Computer Science",
+    ...
+}
+```
+
+I've excluded some other fields here, but as you can see the request gives us more information on the requested resource. 
+Let's break the URL down a little bit.
+
+- [`https://api.peterportal.org`](https://api.peterportal.org) - This means we want to make a request to this server. Your internet will use this to find the server.
+- `/rest/v0/courses/` - When we find the server, what resource do we want. In our case we want a specific course.
+- `COMPSCI161` - This is our parameter, we can change this to another course if we want a different course.
+
+How we know exactly what format to make our URL is usually specified in the API documentation. 
+For the PeterPortal API, we looked here for how to use the courses endpoint. 
+[https://api.peterportal.org/REST-API/courses/](https://api.peterportal.org/REST-API/courses/)
+
+### HTTP Status Codes
+
+In the above response we also received a status code of 200. 
+200 indicates a successful request.
+There are lots of different HTTP status codes, but the gist of it is this:
+
+- 2xx - Success!
+- 4xx - You did something wrong
+- 5xx - There is a problem with the server.
+
+ For more specific status codes, you can read more [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status). 
+
+If we made a request like this:
+
+```json
+cURL https://api.peterportal.org/rest/v0/courses/NONEXISTENT121
+```
+
+Our response will give us an error, indicating this course was not found.
+
+```json
+{
+    "timestamp": "Tue, 15 Feb 2022 22:39:23 GMT",
+    "status": 404,
+    "error": "Bad Request: Invalid parameter",
+    "message": "Course not found"
+}
+```
+
+### URL Encoding
+
+When specifying parameters in URLs, you will need to URL Encode them, especially if there are any special characters. 
+This is because URLs usually use these special characters for other important notation. 
+
+```bash
+# Here the '&' was URL encoded to %26. 
+cURL https://api.peterportal.org/rest/v0/courses/I%26CSCI33
+```
+
+In JavaScript, we can use `encodeURIComponent` to URL encode our parameter strings. 
+
+### Fetch
+
+To make a request to an API in JavaScript, we use the fetch library. 
+
+```bash
+npm install node-fetch
+```
+
+Fetch is a function that takes 2 arguments. The url and a configuration object.
+
+```jsx
+const url = "https://api.peterportal.org/rest/v0/courses/all";
+const response = await fetch(url, {
+	"method": "GET"
+});
+console.log(response.json());
+```
+
+Learn more about Fetch, in Mozilla documentation:
+
+[Using the Fetch API - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+
+## GraphQL
+
+### What is GraphQL?
+
+💡 GraphQL is a query language for Web APIs. GraphQL itself is *not* a tool or a framework, it is a **language**.
+
+Three cool features of GraphQL
+
+- Get exactly what you ask for
+- Get multiple resources in one request
+- Type System to know what is possible
+
+### Why GraphQL?
+![Social Media Example](../static/img/unit8/social-media-example.png)  
+Let's say you're consuming an API for a social media platform. What kind of data resources are you looking for?
+
+- Posts
+- Pictures
+- Likes
+- Comments
+
+If you're familiar with REST, a REST API endpoints for this app may look like this:
+
+- `/newsfeed` —> [post IDs]
+- `/post/{id}` —> picture ID, user ID, likes
+- `/picture/{id}` —> picture data
+- `/user/{id}/picture` —> commenter profile pic
+
+What's the problem with the REST approach?
+
+📈 **Scalability**
+
+**🤮 Too much data**
+
+With REST, the fields I get from each endpoint cannot be changed.
+If I just want to get the user who posted a post, the `/post/{id}` endpoint returns more than just the user — it also returns the `picture ID` and the number of `likes`. 
+I don't need all of that, and such inefficiency can be costly in the long run. 
+
+😵 **Complicated**
+
+Certain use cases can lead to multiple, complicated requests to get the resources I want. 
+Let's say I want to get the profile picture of every user who posted on the newsfeed. 
+
+1. `/newsfeed` I need to get all the `post ID` from the newsfeed
+2. `/post/{id}` I then need to get the `user ID` of who made each post
+3. `/user/{id}/picture` I then use the `user ID` from each post to get the profile picture
+
+Now that's *complicated.*
+
+Instead, we can use GraphQL! 🤑
+
+### Scalability
+
+#### Don't get more data than you need
+
+With GraphQL, you **get exactly what you need**. 
+In each request, you can specify what fields are to be returned. 
+If you want to add another field later on, like a commenter's username, simply add it into the request!
+
+![GraphQL Query Example](../static/img/unit8/graphql-query.gif)
+
+#### Simplified usage
+
+So we know that GraphQL puts all resources under one endpoint, but how does it do this and keep things simple? 
+A **type system** defines the fields available in a type as well as a type's relationship with other types. 
+So if we get an overhead perspective, we can see that this is what puts the graph in GraphQL.
+
+![GraphQL Types](../static/img/unit8/graphql-types.gif)
+
+### How to use GraphQL
+
+Like in REST, we can use the Fetch API to make a request. 
+First, we define our URL, and our query. 
+In our query we specify what data we want, and which fields we want. 
+Usually the documentation for the API will tell you the names of the fields. 
+
+For the PeterPortal API, the documentation is found in its [GraphQL Playground](https://api.peterportal.org/graphql-playground), under the `docs` tab on the right. 
+The playground is usually in most GraphQL APIs that let you test out their queries. 
+
+```jsx
+const url = "https://api.peterportal.org/graphql/";
+
+const query = `
+    query {
+        course(id: "DANCE3"){
+            id
+            department
+            school
+            instructor_history {
+                ucinetid
+                department
+            }
+        }
+    }`;
+```
+
+In this query, we are querying `course` with the id `DANCE3`. 
+The course query returns a Course type, that we specify what fields we want. 
+One of these is the `instructor_history` which is an array of Instructor types. 
+Since this is also a type, we need to give it some more fields of the Instructor type. 
+
+In GraphQL, all requests are POST requests to the endpoint, `/graphql/`. 
+The fetch function takes in two arguments. 
+A URL is the first one, and the second one is options (we pass in as a JavaScript Object).
+
+```jsx
+const response = await fetch(url, {
+	"method": "POST",
+	"body": JSON.stringify({query}),
+	// Not necessary for every Web API, but it's good practice
+  "headers" : {
+      "Content-Type": "application/json",
+	}
+});
+console.log(response.json());
+```
+
+GraphQL is super cool and an up and coming way of communicating with APIs. 
+More and more apps everywhere are using GraphQL, and it's definitely worth learning. 
+There is a lot more we can do with GraphQL, and this is only the beginning.
+
+## PeterPortal API
+
+The PeterPortal API was created by ICSSC to encourage user development of projects to benefit UCI. 
+It includes data on Courses, Instructors, Grades and Schedule of Classes. 
+It is being used by our current projects including AntAlmanac, Zotistics, and even our newest project, PeterPortal. 
+
+Check it out here: [PeterPortal API Docs](https://api.peterportal.org/)
+
+## Assignment
+
+For the assignment this week, we will be building off of last week's project and make requests to the PeterPortal API to display some data!
+
+**Required Tasks**
+
+-  Make a Request to the PeterPortal API REST Endpoint with Fetch
+-  Display the data from the REST API
+-  Make a request to the PeterPortal API GraphQL Endpoint
+-  Display data from GraphQL API
+-  Style the data you just added!
+
+**Optional Stretch Goals**
+
+-  Use GraphQL to also display Instructor History and each of their names
+
+### Due Date
+
+Monday, May 23th at 11:59pm.
+
+### Submission
+Complete the [Google Form](https://forms.gle/UpcXA8Bjmq3twZjt7)
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmmAYnzx73FY9Xi1AUabbFqoThDAuJl3o8SSsx40MINLsH3A/viewform?embedded=true" width="640" height="1400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+# External Resources
+
+PeterPortal API
+
+- [api.peterportal.org](https://api.peterportal.org)
+- [REST API](https://api.peterportal.org/REST-API/start_here/)
+- [GraphQL API](https://api.peterportal.org/GraphQL-API/start_here/)
+
+GraphQL
+
+- [https://graphql.org/](https://graphql.org/)
+- [https://www.howtographql.com/](https://www.howtographql.com/)
+
+Presentation Slides: 
+
+- [API Slides](https://docs.google.com/presentation/d/1al4_dRwGblKJUJxYF9kolIX9QEUmZdAWXpak8svZpqI/edit?usp=sharing)
+- [GraphQL Slides](https://docs.google.com/presentation/d/17qjgXJdK1ZNukdsAoUWJgGnm8wcOSrmir7f06y1BfrA/edit?usp=sharing)
