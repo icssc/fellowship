@@ -1,5 +1,6 @@
 ---
 sidebar_position: 8
+sidebar_label: "Unit 8: APIs"
 ---
 
 import Video from '@site/src/components/Video';
@@ -177,8 +178,13 @@ Three cool features of GraphQL
 - Type System to know what is possible
 
 ### Why GraphQL?
-![Social Media Example](../static/img/unit8/social-media-example.png)  
-Let's say you're consuming an API for a social media platform. What kind of data resources are you looking for?
+<div style={{display: "flex", "flex-wrap": "wrap"}}>
+
+<img src="/img/unit8/social-media-example.png" alt="Social Media Example" style={{width: "40%", height:"40%", margin: "auto 2em 2em 0.5em", minHeight: "400px", minWidth: "320px"}}/> 
+
+<div style={{maxWidth: "498px"}}>
+Let's say you're consuming an API for a social media platform. 
+What kind of data resources are you looking for?
 
 - Posts
 - Pictures
@@ -191,6 +197,10 @@ If you're familiar with REST, a REST API endpoints for this app may look like th
 - `/post/{id}` —> picture ID, user ID, likes
 - `/picture/{id}` —> picture data
 - `/user/{id}/picture` —> commenter profile pic
+
+</div>
+</div>
+
 
 What's the problem with the REST approach?
 
