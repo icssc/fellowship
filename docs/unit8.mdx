@@ -178,11 +178,6 @@ Three cool features of GraphQL
 - Type System to know what is possible
 
 ### Why GraphQL?
-<div style={{display: "flex", "flex-wrap": "wrap"}}>
-
-<img src="/img/unit8/social-media-example.png" alt="Social Media Example" style={{width: "40%", height:"40%", margin: "auto 2em 2em 0.5em", minHeight: "400px", minWidth: "320px"}}/> 
-
-<div style={{maxWidth: "498px"}}>
 Let's say you're consuming an API for a social media platform. 
 What kind of data resources are you looking for?
 
@@ -198,21 +193,14 @@ If you're familiar with REST, a REST API endpoints for this app may look like th
 - `/picture/{id}` —> picture data
 - `/user/{id}/picture` —> commenter profile pic
 
-</div>
-</div>
-
-
-What's the problem with the REST approach?
-
-📈 **Scalability**
-
-**🤮 Too much data**
+#### What's the problem with the REST approach?
+**Too much data**
 
 With REST, the fields I get from each endpoint cannot be changed.
 If I just want to get the user who posted a post, the `/post/{id}` endpoint returns more than just the user — it also returns the `picture ID` and the number of `likes`. 
 I don't need all of that, and such inefficiency can be costly in the long run. 
 
-😵 **Complicated**
+**Complicated**
 
 Certain use cases can lead to multiple, complicated requests to get the resources I want. 
 Let's say I want to get the profile picture of every user who posted on the newsfeed. 
@@ -325,7 +313,7 @@ Monday, May 23th at 11:59pm.
 
 ### Submission
 Complete the [Google Form](https://forms.gle/UpcXA8Bjmq3twZjt7)
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmmAYnzx73FY9Xi1AUabbFqoThDAuJl3o8SSsx40MINLsH3A/viewform?embedded=true" width="640" height="1400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmmAYnzx73FY9Xi1AUabbFqoThDAuJl3o8SSsx40MINLsH3A/viewform?embedded=true" width="100%" height="1400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 # External Resources
 
