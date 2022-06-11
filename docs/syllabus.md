@@ -44,8 +44,6 @@ We recommend reviewing the material as soon as possible though, so you can ask q
 
 ### Assignments
 
-Assignments are **due Monday at 11:59pm.** unless stated otherwise. 
-
 Each assignment will have a list of required tasks and a list of optional stretch goals for you to complete. You will receive a point for each task that you complete.
 
 ### Passing the Course
@@ -55,14 +53,6 @@ In order to pass the course, **you must complete all of the required tasks on al
 ### Points Scoreboard
 
 Every point that you earn during the course will be added to your overall score. At the end of the quarter, the top performing students will receive a small prize (TBA 😉)
-
-### Late Policy
-
-For each day that an assignment is late, you will lose 25% of the points on that assignment.
-
-> *Example:* if you turn in an assignment 1 day late that had 4 tasks, you will lose 25% (1 point) and only receive 3 points.
-
-Since every unit builds on top of the previous one, it is important that you complete each assignment on-time.
 
 ## <u>Course Communication</u>
 
