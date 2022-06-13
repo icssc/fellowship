@@ -6,9 +6,11 @@ sidebar_label: Syllabus
 # ICSSC Projects Fellowship Syllabus
 Welcome to the **ICS Student Council Fellowship**!
 
-The goal of this course is to teach you fundamental software development and web development skills that aren’t normally taught in the classroom. By the end of the quarter, you will have the skillset necessary to create your own React websites and will have the opportunity to contribute to one our ICSSC Projects such as [AntAlmanac](https://antalmanac.com), [PeterPortal](http://peterportal.org), or [Zotistics](http://zotistics.com)!
+The goal of this course is to teach you fundamental software development and web development skills that aren’t normally taught in the classroom. 
+By the end of the course, you will have the skillset necessary to create your own React websites and will have the opportunity to contribute to one our ICSSC Projects such as [AntAlmanac](https://antalmanac.com), [PeterPortal](http://peterportal.org), [Zotistics](http://zotistics.com), or this [Fellowship Website](https://fellowship.icssc.club)!
 
-This is an **asynchronous** course with prerecorded videos, weekly assignments, and virtual Discord Office Hours. You should be able to commit 2-3 hours per week for this Fellowship.
+This is an **asynchronous** course with prerecorded videos, assignments, and virtual [Discord](http://discord.gg/GzF76D7UhY) support. 
+You can work through the units at your own pace.
 
 *Disclaimer: This course is **not** for credit and is **not** affiliated with UCI.*
 
@@ -19,11 +21,9 @@ This is an **asynchronous** course with prerecorded videos, weekly assignments, 
 | Chase Carnaroli | He, Him, His | ccarnaro@uci.edu | ChaseC99 |
 | Raman Gupta | He, Him, His | rxgupta@uci.edu | ramanxg |
 
-## <u>Course Timeline</u>
+## <u>Course Units</u>
 
-*This is our tentative course timeline and is subject to change.* 
-
-| Week | Topics | Content |
+| Unit | Topics | Content |
 | :--- | :--- | :--- |
 | 1 | Fellowship Application, GitHub | Apply to the Fellowship and get your GitHub setup. |
 | 2 | Terminal | The basics of the terminal. |
@@ -38,57 +38,30 @@ This is an **asynchronous** course with prerecorded videos, weekly assignments, 
 
 ## <u>Course Content</u>
 
-Every Monday, the unit for the week will be available on this website. Each unit will contain a pre-recorded video, external resources, and your assignment(s) for the week. You can look through this material at your own pace at a time that is convenient for your schedule. 
-
-We recommend reviewing the material as soon as possible though, so you can ask questions in Discord and/or Office Hours during the week.
+Each unit will contain a pre-recorded video, external resources, and your assignment(s) for the week. 
+You can look through this material at your own pace at a time that is convenient for your schedule. 
 
 ### Assignments
 
-Assignments are **due Monday at 11:59pm.** unless stated otherwise. 
+Each assignment will have a list of required tasks and a list of optional stretch goals for you to complete.
 
-Each assignment will have a list of required tasks and a list of optional stretch goals for you to complete. You will receive a point for each task that you complete.
+:::note There are no due dates
+Some lecture videos might mention a "Due Date"; you can ignore this.
+Assignments can be completed at your own pace!
+:::
 
 ### Passing the Course
 
 In order to pass the course, **you must complete all of the required tasks on all of the assignments**. 
 
-### Points Scoreboard
-
-Every point that you earn during the course will be added to your overall score. At the end of the quarter, the top performing students will receive a small prize (TBA 😉)
-
-### Late Policy
-
-For each day that an assignment is late, you will lose 25% of the points on that assignment.
-
-> *Example:* if you turn in an assignment 1 day late that had 4 tasks, you will lose 25% (1 point) and only receive 3 points.
-
-Since every unit builds on top of the previous one, it is important that you complete each assignment on-time.
-
-## <u>Course Communication</u>
+## <u>Course Platforms</u>
 
 ### Discord - *Our Messaging Platform*
 
-All communication will happen in the [ICSSC Projects Discord](http://discord.gg/GzF76D7UhY). 
-It is important that you check Discord regularly, so you don’t miss any important updates.
-After joining the server, we will give you a `fellow` role, which grants you access to the following channels in our Fellowship Category.
+All communication will happen in the [ICSSC Projects Discord](http://discord.gg/GzF76D7UhY).
+There is #fellowship channel for your to ask questions.
 
-| Channel | Description |
-| :--- | :--- |
-| #announcements | Important updates about the Fellowship. |
-| #fellowship | The main chat for you to meet others in the Fellowship. |
-| #questions | Any questions about technical problems, course logistics, or life. |
-| #voice-chat-text | For random messages from people in the voice channels. |
-| 🔈 Office Hours | Voice channel for our weekly office hours. |
-| 🔈 Work Session | Voice channel for you to use  |
 
 ### Fellowship Website - *Our Canvas*
 
-All information about the Fellowship can be found at [fellowship.icssc.club](https://fellowship.icssc.club/course/syllabus). 
-
-
-## <u>Office Hours</u>
-
-Chase and Raman will host Office Hours on Discord each week. You are welcome to come join the voice channel to ask any questions about the Fellowship assignments, career advice, or life in general! These are optional but we hope you’ll stop by to come hangout 😊
-
-***Location***: Discord `🔈 Office Hours` Voice Channel  
-***Day & Time:*** Tuesdays and Thursdays from 2-3pm
+All information about the Fellowship can be found here on [fellowship.icssc.club](https://fellowship.icssc.club/course/syllabus). 
