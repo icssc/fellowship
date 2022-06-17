@@ -38,7 +38,7 @@ You can work through the units at your own pace.
 
 ## <u>Course Content</u>
 
-Each unit will contain a pre-recorded video, external resources, and your assignment(s) for the week. 
+Each unit will contain a pre-recorded video, external resources, and your assignment(s). 
 You can look through this material at your own pace at a time that is convenient for your schedule. 
 
 ### Assignments
