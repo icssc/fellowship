@@ -124,6 +124,8 @@ This function takes 2 elements and returns a value that determines how to order 
 | < 0 | sort a before b |
 | === 0 | keep original order of a and b |
 
+> 💡 The use of `===` is intentional here! Check out this [Stack Overflow thread](https://stackoverflow.com/questions/359494/which-equals-operator-vs-should-be-used-in-javascript-comparisons) for an in depth dive on `==` vs `===` in JavaScript.
+
 
 ```javascript
 // Sort the list of words ignoring uppercase
@@ -318,7 +320,10 @@ const otherSayHello = (firstName, lastName) => {
 	return "Hello, " + firstName + " " + lastName;
 };
 ```
-Arrow functions return a value by default, so if it only requires one statement to write the function, we can cut it even shorter. 
+
+In an arrow function, the arguments are defined in the parenthesis (in this case `firstName` and `lastName`) and the function body is defined in the curly brackets after the arrow, hence the name.
+
+Arrow functions return a value by default, so if it only requires one statement to write the function, we can cut it even shorter by removing the brackets and the `return` keyword. 
 
 ```javascript
 const otherSayHello = (firstName, lastName) => "Hello, " + firstName + " " + lastName;

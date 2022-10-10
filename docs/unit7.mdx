@@ -73,11 +73,20 @@ Alright, you've waited long enough. Back to React! React is built upon many comp
 Here's an example: 
 
 ```jsx
-function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
+function ShoppingList(props) {
+  return (
+    <div>
+        <h1>Shopping List for {props.name}</h1>
+        <ul>
+            <li>"Instagram"</li>
+            <li>"WhatsApp"</li>
+            <li>"Oculus"</li>
+        </ul>
+    </div>
+  )
 }
 
-// Example usage: <Welcome name="Mark" />
+// Example usage: <ShoppingList name="Mark" />
 ```
 
 ShoppingList is a **React component class.** A component takes in parameters called `props` (short for “properties”), and returns a hierarchy of views to display. 
@@ -90,7 +99,7 @@ React renders elements in the React DOM (or Document Object Model). The DOM is a
 
 This component returns what we want our user to see on their screen. More specifically, the function returns a **React element**. Components are made of a hierarchy of elements. 
 
-- The above example really looks like this (Beware, the code is not pretty):
+- Using normal JS the above example really looks like this (Beware, the code is not pretty):
     
     ```jsx
     React.createElement("div", {
@@ -206,11 +215,11 @@ function Example() {
 
   return (
       <div>        
-          <h1>Hello, world!</h1>
-          <h2>The counter is at {count}.</h2>
-          <button onClick={() => setCount(count + 1)}>
+            <h1>Hello, world!</h1>
+            <h2>The counter is at {count}.</h2>
+            <button onClick={() => setCount(count + 1)}>
 		        Increment!
-		      </button>
+            </button>
       </div>
     );
 }
@@ -221,7 +230,7 @@ There's a lot going on here, so let's break it up:
 2. `useState` is a Hook, that we call inside a function Component to give it a local state. A state lets us preserve these values after the function call ends. 
     1. We pass in an argument to initialize the state, which is `0`. 
     2. `useState` returns a pair: the current state value `count`, and a function that lets you update the state to a new value `setCount`
-        1. We use syntax called “array destructuring”. Also in python, this lets us set variables to individual items in an array. More on this below.
+        1. We use syntax called “array destructuring”. Also in Python, this lets us set variables to individual items in an array. More on this below.
 3. For the function component we return the markup for the component. Notice the use of curly brackets around our JavaScript.
     1. In `<h2>`, we refer to our state variable to display the current count: `count`
     2. In `<button>`, we attach the function call `() => setCount(count + 1)}` so when the button is clicked, the `setCount` is called, updating our State, and re-rendering our component. 
@@ -356,11 +365,11 @@ function NumberList(props) {
     </li>
   );
   return (
-		<ul>
+	<ul>
       {numbers.map((number) =>
         <li key={number.toString()}>
-		      {number}
-		    </li>
+		  {number}
+        </li>
       )}
     </ul>
   );
@@ -386,7 +395,7 @@ function Example(props) {
 ```
 
 ## Setting up React
-With node installed, it also comes with `npm` a package manager for node. `npx` is a package runner that is pre-bundled with `npm`. We use `npx` to create our first react app. 
+With node installed, it also comes with `npm`, a package manager for node. `npx` is a package runner that is pre-bundled with `npm`. We use `npx` to create our first react app. 
 
 Navigate to a directory where you want to create your project. Then, run the command: 
 

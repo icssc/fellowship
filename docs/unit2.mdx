@@ -77,9 +77,11 @@ When typing commands in terminal, you might find yourself looking to make a quic
 
 ![Vim](../static/img/unit2/vim.png)
 
-Vim is a lightweight text editor, you can use inside of your terminal. You will find that many programmers use this editor, known for its mouse-less interaction. However, it is a little complicated, so let's get started.  
+Vim is a lightweight text editor, you can use inside of your terminal. You will find that many programmers use this editor, known for its mouse-less interaction. However, it is a little complicated as the modal based editing is different from anything you probably are used to, so let's get started.  
  
-**Opening a File**  To open a file just type in `vim FILE_NAME` into your terminal.  This should open up the vim editor in your terminal. 
+**Opening a File**
+
+To open a file just type in `vim FILE_NAME` into your terminal.  This should open up the vim editor in your terminal. 
 
 **Modes**
 
@@ -89,7 +91,7 @@ The most important one will be hitting *i* (for “insert”), which will change
 
 **Saving the File**
 
-To save and exit the file, make sure you're in command mode. Press : and you will be in last-line mode. In this mode, you can enter commands like `:w` to save or `:q` to exit. You can even combine these and type `:wq` to save and exit.
+To save and exit the file, make sure you're in command mode. Press : and you will be in last-line mode. In this mode, you can enter commands like `:w` (write) to save or `:q` (quit) to exit. You can even combine these and type `:wq` (write and quit) to save and exit.
 
 ### Nano
 
@@ -121,12 +123,9 @@ To save and exit the file, you will be using two commands. Ctrl + O, saves the f
 In your root directory, type `ls -a` to find your `.bashrc` file. 
 If you are on MacOS (post Catalina) you may have a `.zshrc` file instead. 
 
-This file will run every time that you start a new terminal. Inside of it, you can add your own custom aliases, functions, and customize you prompt.
+This file will run every time that you start a new terminal. Inside of it, you can add your own custom aliases, functions, and customize your prompt.
 
-<aside>
-💡 When you make changes to the `.bashrc` or `.zshrc`, those changes won't take effect until open up a new Terminal window or run `source .bashrc` (`source .zshrc` on Mac)
-
-</aside>
+> 💡 When you make changes to the `.bashrc` or `.zshrc`, those changes won't take effect until open up a new Terminal window or run `source .bashrc` (`source .zshrc` on Mac)
 
 ### Functions and Aliases
 
@@ -149,12 +148,14 @@ You can learn more about functions [here](https://linuxize.com/post/bash-functio
 
 ### Customizing Your Prompt
 
-There are lots of things you can do with your prompt. It can print the current directory you're in, show the time, display the git branch, and more. You can even add colors! This is done using special prompt characters.
+As a developer, you will be spending a lot of time in your terminal so you want it to be as comfortable of an experience as possible. There are lots of things you can do with your prompt. It can print the current directory you're in, show the time, display the git branch, and more. You can even add colors! This is done using special prompt characters.
 *Note: the special characters may differ between `.bashrc` and `.zshrc`.*
 
 In `.bashrc`, for example, `\d` will print the date, `\u` will print the current user, and **`\w`** will print the current user. You can find a list of commands in this [Bash Prompt Guide](https://ss64.com/bash/syntax-prompt.html).
 
 For `.zshrc`, please refer to this [ZSH Prompt Guide](https://blog.devgenius.io/customize-the-macos-terminal-zsh-4cb387e4f447) and the [ZSH Prompt Documentation](https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html#Prompt-Expansion).
+
+For even more customization, such as adding autocomplete or syntax highlighting plugins check out frameworks like [Oh My Zsh](https://ohmyz.sh/).
 
 ---
 
