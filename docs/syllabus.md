@@ -16,10 +16,10 @@ You can work through the units at your own pace.
 
 ## <u>Instructors</u>
 
-| Name | Pronouns | Email | GitHub |
-| :--- | :--- | :--- | :--- |
-| Chase Carnaroli | He, Him, His | ccarnaro@uci.edu | ChaseC99 |
-| Raman Gupta | He, Him, His | rxgupta@uci.edu | ramanxg |
+| Name | Pronouns | GitHub |
+| :--- | :--- | :--- |
+| Chase Carnaroli | He, Him, His | @ChaseC99 |
+| Raman Gupta | He, Him, His | @ramanxg |
 
 ## <u>Course Units</u>
 
