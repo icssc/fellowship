@@ -113,7 +113,7 @@ const user: User = {
 }
 // We will get this error:
 // Type '{ username: string; id: number; }' is not assignable to type 'User'.
-//  Object literal may only specify known properties, and 'username' does not exist in type 'User'.ts(2322)
+// Object literal may only specify known properties, and 'username' does not exist in type 'User'.ts(2322)
 ```
 
 We can make our object more flexible by making it indexable. 
@@ -125,7 +125,8 @@ interface User {
 	id: number;
 	[key: string]: any;
 }
-//This is now allowed
+
+// This is now allowed
 const user: User = {
 		name: "Raman",
     username: "ramanxg",
@@ -145,7 +146,8 @@ We can use string or number literals to define a set of values a value can be, o
 ```tsx
 type LockStates = "locked" | "unlocked";
 type someString = string | string[];
-//both are valid
+
+// both are valid
 let a: someString = "hello"
 let b: someString = ["hello", "world", "!"]
 ```
@@ -177,16 +179,16 @@ const y: MyType<number> = {
 TypeScript is “transpiled” to JavaScript. 
 
 ```tsx
-//hello.ts
-var courseNumber: number = 133;
+// hello.ts
+let courseNumber: number = 133;
 console.log('Hello, IN4MATX ' + courseNumber + '!');
 ```
 
 We transpile with the typescript compiler using`tsc hello.ts`.
 
 ```tsx
-//hello.js
-var courseNumber = 133;
+// hello.js
+let courseNumber = 133;
 console.log('Hello, IN4MATX ' + courseNumber + '!');
 ```
 
