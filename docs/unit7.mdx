@@ -47,7 +47,7 @@ React is a JavaScript library to build user interfaces, usually websites. Create
 
 Alright, one more small thing before we dive in to React! React uses JavaScript, but more specifically, it's called JSX. This is a syntax extension to JavaScript. 
 
-```jsx'
+```jsx
 // an example of JSX
 const element = <h1>Hello, world!</h1>;
 ```
@@ -57,9 +57,11 @@ JSX combines our markup language (HTML-like), and our logic (JavaScript). This l
 ```jsx
 const name = 'Raman Gupta';
 const element = <h1>Hello, {name}</h1>;
-//we can do this in element attributes as well
-const imgURL = "./path/to/image.png"
+
+// we can do this in element attributes as well
+const imgURL = "./path/to/image.png";
 const imgElement = <img src={imgURL} />;
+
 // we use className instead of class to give elements a class
 const withClass= <h2 className="example" />;
 ```
@@ -103,13 +105,14 @@ This component returns what we want our user to see on their screen. More specif
     
     ```jsx
     React.createElement("div", {
-      className: "shopping-list"
-    }, React.createElement("h1", null, "Shopping List for ", props.name), 
-    	 React.createElement("ul", null, 
-    			React.createElement("li", null, "Instagram"), 
-    			React.createElement("li", null, "WhatsApp"), 
-    			React.createElement("li", null, "Oculus")
-    		)
+        className: "shopping-list"
+      },
+      React.createElement("h1", null, "Shopping List for ", props.name),
+      React.createElement("ul", null, 
+        React.createElement("li", null, "Instagram"), 
+        React.createElement("li", null, "WhatsApp"), 
+        React.createElement("li", null, "Oculus")
+    	)
     );
     ```
     
@@ -178,12 +181,14 @@ In this instance of the `Welcome` component, it can access this data using the `
 
 ```jsx
 <Welcome name="Sara" title="Ms." />
-//In the component the props object would look like this:
+
+// In the component the props object would look like this:
 props = {
 	"name": "Sara",
 	"title": "Ms."
 }
-//We can use props like this
+
+// We can use props like this
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
@@ -255,8 +260,8 @@ This is something called Array Destructuring, a cool feature of JavaScript.
 ```javascript
 let [greeting, pronoun] = ["Hello", "I" , "love", "AntAlmanac"];
 
-console.log(greeting);//"Hello"
-console.log(pronoun);//"I"
+console.log(greeting); // "Hello"
+console.log(pronoun); // "I"
 ```
 
 In our example in React, `useState` returns an array of 2 values. The first being the value of the state variable. The second is a function to set the state variable. 
@@ -270,9 +275,9 @@ We can also do Object Destructuring. This is similar to arrays, but we are inste
 ```javascript
 let {name, organization, role} = {name: "Raman", organization: "ICSSC", role: "Projects Co-Chair"};
 
-console.log(name);//"Raman"
-console.log(organization);//"ICSSC"
-console.log(role);//Projects Co-Chair"
+console.log(name); // "Raman"
+console.log(organization); // "ICSSC"
+console.log(role); // "Projects Co-Chair"
 ```
 
 Note the names on the left hand side should have the same name as the property key in the object. 
@@ -280,8 +285,8 @@ If we want to assign a new variable name, we can. We also don't need to extract 
 ```javascript
 let {name, organization: club} = {name: "Raman", organization: "ICSSC", role: "Projects Co-Chair"};
 
-console.log(name);//"Raman"
-console.log(club);//"ICSSC"
+console.log(name); // "Raman"
+console.log(club); // "ICSSC"
 ```
 
 This is also often used in function arguments.

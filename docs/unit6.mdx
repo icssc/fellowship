@@ -29,7 +29,7 @@ Here's a quick overview of the basics.
 ```javascript
 console.log("Hello, World!"); 
 // In Web Development, this will actually show up in the developer console. 
-// Open the console in Chrome with cmd+alt+j (mac) or ctrl+shift+j (windows)
+// Open the console in Chrome with Cmd+Alt+J (mac) or Ctrl+Shift+J (windows)
 ```
 
 ### Variables
@@ -99,7 +99,7 @@ console.log(array);			// "['a', 'b', 'c', 1, 2, 3, '4']"
 const str = array.join('-'); // Combine elements into a string
 console.log(str);			 // "a-b-c-1-2-3-4"
 
-//get index of an element (first occurrence)
+// get index of an element (first occurrence)
 console.log(array.indexOf('x')); // 3
 
 array.reverse();	// Reverse the array
@@ -154,7 +154,7 @@ const numbers = [1, 2, 3, 4];
 const doubled = numbers.map(function(item) {
 	return item * 2;
 });
-console.log(doubled); // "[2, 4, 6, 8]"
+console.log(doubled); // [2, 4, 6, 8]
 ```
 
 #### Filter
@@ -165,7 +165,7 @@ const numbers = [1, 2, 3, 4];
 const evens = numbers.filter(function(item) {
 	return item % 2 === 0;
 });
-console.log(evens); // "[2, 4]"
+console.log(evens); // [2, 4]
 ```
 
 #### Reduce
@@ -182,10 +182,10 @@ const numbers = [1, 2, 3, 4];
 // Callback Function parameters
 // 	result 	- the accumulator, which is the returned value of the previous iteration.
 // 	item 	- the current item in the array.
-//
+
 // Note: the intial value of the accumulator is set to 0.
 const sum = numbers.reduce(function (result, item) { return result + item; }, 0);
-console.log(sum); // "10"
+console.log(sum); // 10
 ```
 
 ### Conditionals
@@ -295,7 +295,7 @@ Unlike python, you don't need quotes around the keys.
 const ages = {alice:40, bob:35, charles:13}
 const things = {num:12, dog:'woof', list:[1,2,3]}
 
-//both of these work!
+// both of these work!
 console.log(ages["alice"]); // 40
 console.log(ages.bob); // 35
 ```
@@ -400,7 +400,7 @@ Create a new file with the `.js` file extension.
 Add this to the file: 
 
 ```javascript
-//hello.js
+// hello.js
 console.log("Hello, World!")
 ```
 
