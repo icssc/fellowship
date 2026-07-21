@@ -1,0 +1,8 @@
+onlyBuiltDependencies:
+  - core-js
+  - core-js-pure
+
+minimumReleaseAge: 1440
+
+allowBuilds:
+  core-js: true

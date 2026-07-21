@@ -1,20 +1,24 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import { github as lightCodeTheme, darcula as darkCodeTheme } from "prism-react-renderer"
 
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+/** @type {import('@generated/docusaurus.config').config} */
+export default {
   title: 'ICSSC Fellowship',
   tagline: 'A crash course on web development. 💻',
   url: 'https://fellowship.icssc.club',
   baseUrl: '/',
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'icssc',
   projectName: 'fellowship',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    }
+  },
 
   presets: [
     [
@@ -34,7 +38,7 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
         title: 'ICSSC Fellowship',
@@ -58,8 +62,8 @@ const config = {
       },
       footer: {
         links: [
-            {label: "Discord", href:"https://discord.gg/GzF76D7UhY"},
-            {label: "GitHub", href: 'https://github.com/icssc'}
+          { label: "Discord", href: "https://discord.gg/GzF76D7UhY" },
+          { label: "GitHub", href: 'https://github.com/icssc' }
         ],
         copyright: `Copyright © ${new Date().getFullYear()} ICS Student Council | Built with Docusaurus.`,
       },
@@ -72,5 +76,3 @@ const config = {
       }
     }),
 };
-
-module.exports = config;
