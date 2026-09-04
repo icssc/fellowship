@@ -12,13 +12,13 @@ jobs:
     name: Test deployment
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-          cache: npm
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js and pnpm
+        uses: ./.github/actions/setup-node-and-pnpm
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm ci
       - name: Test build website
-        run: npm run build
+        run: pnpm run build
