@@ -15,8 +15,8 @@ Create a [new issue](https://github.com/icssc/fellowship/issues/new) on Github o
 To contribute to the Fellowship website:
 - Create a fork
 - Clone the fork
-- Install dependencies: `npm install`
-- Start the project: `npm start`
+- Install dependencies: `pnpm install`
+- Start the project: `pnpm start`
 
 
 ## Credits
