@@ -20,6 +20,6 @@ To contribute to the Fellowship website:
 
 
 ## Credits
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This website is built using [Docusaurus 3](https://docusaurus.io/), a modern static website generator.
 
 Content created by Chase Carnaroli and Raman Gupta for the [ICS Student Council](https://icssc.club).  
