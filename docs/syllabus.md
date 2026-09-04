@@ -7,7 +7,7 @@ sidebar_label: Syllabus
 Welcome to the **ICS Student Council Fellowship**!
 
 The goal of this course is to teach you fundamental software development and web development skills that aren’t normally taught in the classroom. 
-By the end of the course, you will have the skillset necessary to create your own React websites and will have the opportunity to contribute to one our ICSSC Projects such as [AntAlmanac](https://antalmanac.com), [PeterPortal](http://peterportal.org), [Zotistics](http://zotistics.com), or this [Fellowship Website](https://fellowship.icssc.club)!
+By the end of the course, you will have the skillset necessary to create your own React websites and will have the opportunity to contribute to one our ICSSC Projects such as [AntAlmanac](https://antalmanac.com), [Anteater API](http://anteaterapi.com), [PeterPlate](https://peterplate.com), or this [Fellowship Website](https://fellowship.icssc.club)!
 
 This is an **asynchronous** course with prerecorded videos, assignments, and virtual [Discord](http://discord.gg/GzF76D7UhY) support. 
 You can work through the units at your own pace.
