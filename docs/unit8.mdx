@@ -56,8 +56,8 @@ This is the primary data format passed between APIs.
 
 ### An Example
 
-Let's do an example with the [PeterPortal API](https://api.peterportal.org/).
-This API was created by ICSSC and is in use by applications like AntAlmanac and Zotistics.
+Let's do an example with the [Anteater API](https://anteaterapi.com) (formerly the PeterPortal API).
+This API was created by ICSSC and is in use by applications like AntAlmanac and PeterPlate.
 It provides data such as courses, instructors, grades, etc.
 
 To make a request, we can use [cURL](https://curl.se/) in our shell. 
@@ -65,42 +65,40 @@ cURL lets us make an HTTP request in our shell.
 By default cURL is making a GET request. 
 
 ```bash
-cURL https://api.peterportal.org/rest/v0/courses/COMPSCI161
+cURL https://anteaterapi.com/v2/rest/courses/COMPSCI161
 ```
 
 The output will look a little weird but after it's made pretty, it will look like this: 
 
 ```json
 {
+  "ok": true,
+  "data": {
     "id": "COMPSCI161",
     "department": "COMPSCI",
-    "number": "161",
+    "courseNumber": "161",
+    "courseNumeric": 161,
     "school": "Donald Bren School of Information and Computer Sciences",
     "title": "Design and Analysis of Algorithms",
-    "course_level": "Upper Division (100-199)",
-    "department_alias": [
-        "CS"
-    ],
-    "units": [
-        4,
-        4
-    ],
+    "courseLevel": "Upper Division (100-199)",
+    "minUnits": 4,
+    "maxUnits": 4,
     "description": "Techniques for efficient algorithm design, including divide-and-conquer and dynamic programming, and time/space analysis. Fast algorithms for problems applicable to networks, computer games, and scientific computing, such as sorting, shortest paths, minimum spanning trees, network flow, and pattern matching.",
-    "department_name": "Computer Science",
+    "departmentName": "Computer Science",
     ...
-}
 ```
 
 I've excluded some other fields here, but as you can see the request gives us more information on the requested resource. 
 Let's break the URL down a little bit.
 
-- [`https://api.peterportal.org`](https://api.peterportal.org) - This means we want to make a request to this server. Your internet will use this to find the server.
-- `/rest/v0/courses/` - When we find the server, what resource do we want. In our case we want a specific course.
+- `https://anteaterapi.com` - This means we want to make a request to this server. Your internet will use this to find the server.
+- `/v2/rest/courses/` - When we find the server, what resource do we want. In our case we want a specific course.
 - `COMPSCI161` - This is our parameter, we can change this to another course if we want a different course.
 
 How we know exactly what format to make our URL is usually specified in the API documentation. 
-For the PeterPortal API, we looked here for how to use the courses endpoint. 
-[https://api.peterportal.org/REST-API/courses/](https://api.peterportal.org/REST-API/courses/)
+For the Anteater API, we looked here for how to use the courses endpoint.
+<!-- docasaurus tries to pull a variable called id -->
+[https://anteaterapi.com/reference#tag/courses/GET/v2/rest/courses/\{id\}](https://anteaterapi.com/reference#tag/courses/GET/v2/rest/courses/{id})
 
 ### HTTP Status Codes
 
@@ -117,17 +115,15 @@ There are lots of different HTTP status codes, but the gist of it is this:
 If we made a request like this:
 
 ```json
-cURL https://api.peterportal.org/rest/v0/courses/NONEXISTENT121
+cURL https://anteaterapi.com/v2/rest/courses/NONEXISTENT121
 ```
 
 Our response will give us an error, indicating this course was not found.
 
 ```json
 {
-    "timestamp": "Tue, 15 Feb 2022 22:39:23 GMT",
-    "status": 404,
-    "error": "Bad Request: Invalid parameter",
-    "message": "Course not found"
+  "ok": false,
+  "message": "Course NONEXISTENT121 not found"
 }
 ```
 
@@ -138,27 +134,22 @@ This is because URLs usually use these special characters for other important no
 
 ```bash
 # Here the '&' was URL encoded to %26. 
-cURL https://api.peterportal.org/rest/v0/courses/I%26CSCI33
+cURL https://anteaterapi.com/v2/rest/courses/I%26CSCI33
 ```
 
 In JavaScript, we can use `encodeURIComponent` to URL encode our parameter strings. 
 
 ### Fetch
 
-To make a request to an API in JavaScript, we use the fetch library. 
-
-```bash
-npm install node-fetch
-```
-
+To make a request to an API in JavaScript, we use the `fetch` function.
 Fetch is a function that takes 2 arguments. The url and a configuration object.
 
 ```jsx
-const url = "https://api.peterportal.org/rest/v0/courses/all";
+const url = "https://anteaterapi.com/v2/rest/ping";
 const response = await fetch(url, {
 	"method": "GET"
 });
-console.log(response.json());
+console.log(await response.json());
 ```
 
 Learn more about Fetch, in Mozilla documentation:
@@ -238,29 +229,26 @@ First, we define our URL, and our query.
 In our query we specify what data we want, and which fields we want. 
 Usually the documentation for the API will tell you the names of the fields. 
 
-For the PeterPortal API, the documentation is found in its [GraphQL Playground](https://api.peterportal.org/graphql-playground), under the `docs` tab on the right. 
+For the Anteater API, the documentation is found in its [GraphQL Playground](https://anteaterapi.com/v2/graphql), under the `docs` tab on the right.
 The playground is usually in most GraphQL APIs that let you test out their queries. 
 
-```jsx
-const url = "https://api.peterportal.org/graphql/";
-
-const query = `
-    query {
-        course(id: "DANCE3"){
-            id
+```graphql
+query hello {
+    course(id: "DANCE3") {
+        id
+        department
+        school
+        instructors {
+            ucinetid
             department
-            school
-            instructor_history {
-                ucinetid
-                department
-            }
         }
-    }`;
+    }
+}
 ```
 
 In this query, we are querying `course` with the id `DANCE3`. 
 The course query returns a Course type, that we specify what fields we want. 
-One of these is the `instructor_history` which is an array of Instructor types. 
+One of these is the `instructors` which is an array of Instructor types.
 Since this is also a type, we need to give it some more fields of the Instructor type. 
 
 In GraphQL, all requests are POST requests to the endpoint, `/graphql/`. 
@@ -270,36 +258,36 @@ A URL is the first one, and the second one is options (we pass in as a JavaScrip
 ```jsx
 const response = await fetch(url, {
 	"method": "POST",
-	"body": JSON.stringify({query}),
+	"body": JSON.stringify({ query }),
 	// Not necessary for every Web API, but it's good practice
   "headers" : {
       "Content-Type": "application/json",
 	}
 });
-console.log(response.json());
+console.log(await response.json());
 ```
 
 GraphQL is super cool and an up and coming way of communicating with APIs. 
 More and more apps everywhere are using GraphQL, and it's definitely worth learning. 
 There is a lot more we can do with GraphQL, and this is only the beginning.
 
-## PeterPortal API
+## Anteater API
 
-The PeterPortal API was created by ICSSC to encourage user development of projects to benefit UCI. 
+The Anteater API was created by ICSSC to encourage user development of projects to benefit UCI.
 It includes data on Courses, Instructors, Grades and Schedule of Classes. 
-It is being used by our current projects including AntAlmanac, Zotistics, and even our newest project, PeterPortal. 
+It is being used by all of our current projects.
 
-Check it out here: [PeterPortal API Docs](https://api.peterportal.org/)
+Check it out here: [Anteater API Docs](https://anteaterapi.com)
 
 ## Assignment
 
-For the assignment this unit, we will be building off of last unit's project and make requests to the PeterPortal API to display some data!
+For the assignment this unit, we will be building off of last unit's project and make requests to the Anteater API to display some data!
 
 **Required Tasks**
 
--  Make a Request to the PeterPortal API REST Endpoint with Fetch
+-  Make a Request to the Anteater API using REST with Fetch
 -  Display the data from the REST API
--  Make a request to the PeterPortal API GraphQL Endpoint
+-  Make a request to the Anteater API GraphQL Endpoint
 -  Display data from GraphQL API
 -  Style the data you just added!
 
@@ -307,18 +295,17 @@ For the assignment this unit, we will be building off of last unit's project and
 
 -  Use GraphQL to also display Instructor History and each of their names
 
-
 ### Submission
-Complete the [Google Form](https://forms.gle/UpcXA8Bjmq3twZjt7)
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScmmAYnzx73FY9Xi1AUabbFqoThDAuJl3o8SSsx40MINLsH3A/viewform?embedded=true" width="100%" height="1400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+Complete the [Google Form](https://forms.gle/JFQxjth5imZGHqHM7)
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScX_0IVFlKn0_Qvl8GhLyTw2k02vggutf9YqOBrCnWSnL8hnA/viewform?embedded=true" width="100%" height="1400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 # External Resources
 
-PeterPortal API
+Anteater API
 
-- [api.peterportal.org](https://api.peterportal.org)
-- [REST API](https://api.peterportal.org/REST-API/start_here/)
-- [GraphQL API](https://api.peterportal.org/GraphQL-API/start_here/)
+- [anteaterapi.com](https://anteaterapi.com)
+- [REST API](https://docs.icssc.club/docs/developer/anteaterapi/rest-api)
+- [GraphQL API](https://docs.icssc.club/docs/developer/anteaterapi/graphql-api)
 
 GraphQL
 

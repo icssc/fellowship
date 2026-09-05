@@ -28,9 +28,9 @@ const FeatureList = [
       <>
         By the end of the Fellowship, you will use your new skills to contribute to 
         one of the ICSSC Projects: <a href="https://antalmanac.com" target="_blank">AntAlmanac</a>
-        , <a href="https://peterportal.org" target="_blank">PeterPortal</a>
-        , <a href="https://api.peterportal.org" target="_blank">PeterPortal API</a>
-        , <a href="https://zotistics.com" target="_blank">Zotistics</a>
+        , <a href="https://anteaterapi.com" target="_blank">Anteater API</a>
+        , <a href="https://peterplate.com" target="_blank">PeterPlate</a>
+        , <a href="https://zotmeet.com" target="_blank">ZotMeet</a>
         , or even this Fellowship website!
       </>
     ),
