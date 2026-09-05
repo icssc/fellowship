@@ -6,8 +6,7 @@ The goal of the Fellowship is to teach fundamental software development and web 
 taught in the classroom.
 By the end of the quarter, students will have the skillset necessary to create their own React websites and will have
 the opportunity to contribute to one our ICSSC Projects such
-as [AntAlmanac](https://antalmanac.com), [Anteater API](http://anteaterapi.com),
-or [PeterPlate](https://peterplate.com)!
+as [AntAlmanac](https://antalmanac.com), [Anteater API](http://anteaterapi.com), [PeterPlate](https://peterplate.com), or [ZotMeet](https://zotmeet.com)!
 
 ## Contributing
 
